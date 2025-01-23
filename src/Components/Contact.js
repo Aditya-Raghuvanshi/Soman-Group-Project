@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import instagramIcon from '../assets/instagram.svg' 
 import facebookIcon from '../assets/facebook.svg' 
 import youtubeIcon from '../assets/youtube.svg' 
 import twitterIcon from '../assets/twitter.svg' 
 
 const Contact = () => {
+    const [name,setName]=useState();
+    const [email,setEmail]=useState();
+    const handleSubmit = ()=>{
+        if(!name)
+        {
+            alert('Please Enter Name');
+        }
+        if(!email)
+        {
+            alert('Please Enter Email');
+        }
+        
+    }
   return (
     <div>
         <div className='flex justify-between mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
             <p className='text-5xl w-[50%]'>Reach out to us!</p>
             <div className='w-[50%]'>
                 <p className='text-[#D6C3AC] text-xl'>Full name</p>
-                <input className='border-b border-[#D6C3AC] w-full my-2' type="text" />
+                <input className='border-b border-[#D6C3AC] w-full mb-4 p-2' onChange={(e)=>{setName(e.target.value)}} type="text" />
                 <p className='text-[#D6C3AC] text-xl'>Email</p>
-                <input className='border-b border-[#D6C3AC] w-full my-2' type="text" />
-                <button className='text-white text-xs bg-[#0B6476] font-semibold mt-8 w-[120px] h-10'>
+                <input className='border-b border-[#D6C3AC] w-full my-2 p-2' onChange={(e)=>{setEmail(e.target.value)}} type="text" />
+                <button className='text-white text-xs bg-[#0B6476] font-semibold mt-8 w-[120px] h-10' onClick={handleSubmit}>
                     SUBMIT
                 </button>
             </div>
