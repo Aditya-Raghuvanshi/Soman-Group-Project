@@ -19,7 +19,7 @@ const ProfilePage = () => {
         <Navbar/>
         <img className='absolute -z-50 top-0 w-full' src={GroupImage} alt="Group img" />
         <div className='flex justify-between bg-[#0B6476] mx-28 mt-[534px] p-14'>
-            <p className='text-5xl text-white font-[zodiac]'>Our Profile</p>
+            <p className='text-5xl text-white font-zodiac'>Our Profile</p>
             <div>
                 <div className="flex mb-6">
                     <img className='w-16' src={horizontalLine} alt="hprozontal line" />

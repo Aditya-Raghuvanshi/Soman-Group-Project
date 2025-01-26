@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import horizontalLine from '../assets/horizontal-line.svg'
 import realEstate from '../assets/real-estate.svg'
 import automobile from '../assets/auto-mobile.svg'
@@ -6,9 +6,12 @@ import distribution from '../assets/distribution.svg'
 import textile from '../assets/textile.svg'
 import farming from '../assets/farming.svg'
 import { useNavigate } from 'react-router-dom'
+import gsap from 'gsap'
+// import heroGraphic from '../assets/hero_graphics.svg'
 
 const DomainContainer = () => {
   const navigate= useNavigate();
+  const containerRef = useRef(null);
 
   const array = [
     {
@@ -112,42 +115,113 @@ const DomainContainer = () => {
       }
     })
   }
+  useEffect(()=>{
+    const handleIntersection = (entries, observer) =>{
+      entries.forEach(entry=>{
+        if (entry.isIntersecting){
+          const letters = document.querySelectorAll('.domain-text span');
+
+          // GSAP staggered animation for the letters
+          gsap.fromTo(
+            letters, 
+            { opacity: 0, y: -50 },  // Start with letters off-screen and transparent
+            { 
+              opacity: 1, 
+              y: 0, 
+              duration: 1, 
+              stagger: 0.1,  // Stagger the animation by 0.1 seconds per letter
+              ease: "ease.out"  // Smooth easing effect
+            }
+          );
+
+          const letters1 = document.querySelectorAll('.domain-text1 span');
+
+          // GSAP staggered animation for the letters
+          gsap.fromTo(
+            letters1, 
+            { opacity: 0, y: -50 },  // Start with letters off-screen and transparent
+            { 
+              opacity: 1, 
+              y: 0, 
+              duration: 1, 
+              stagger: 0.1,  // Stagger the animation by 0.1 seconds per letter
+              ease: "ease.out"  // Smooth easing effect
+            }
+          );
+
+          gsap.fromTo(
+            '.image3', 
+            { scale: 0.8, opacity: 0 }, // Start smaller and invisible
+            { scale: 1, opacity: 1, duration: 4, ease: "power2.out" } // Scale to normal size
+          );
+          observer.unobserve(entry.target);
+        }
+      })
+    }
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.1, // Trigger when 30% of the element is in the viewport
+    });
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    // Clean up the observer when the component is unmounted
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  },[])
+
+  const splitText = (text) => {
+    return text.split('').map((letter, index) => (
+      letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
+    ));
+  };
+  
   return (
-    <div className='p-28'>
+    <div ref={containerRef} className='p-28'>
       <div>
+      {/* <img className='absolute top-[1600px] left-0 rotate-[15deg]' src={heroGraphic} alt="" /> */}
         <div className="flex mb-6">
             <img className='w-16' src={horizontalLine} alt="" />
             <p className='text-[#996830] text-sm ml-4'>OUR DOMAINS</p>
         </div>
-        <p className='text-6xl font-semibold w-[50%] mb-20 font-[zodiac]'>We lead & drive benchmark industries</p>
+        <p className='domain-text text-6xl w-[50%] font-semibold font-zodiac'>
+          {splitText('We lead & drive')}
+        </p>
+        <p className='domain-text1 text-6xl font-semibold mb-20 font-zodiac hero-text1'>
+          {splitText('benchmark industries')}
+        </p>
       </div>
       <div>
         <div className="flex justify-between gap-14">
-            <div className='p-10 border border-[#E6D8CC]'>
+            <div className='image3 p-10 border border-[#E6D8CC]'>
                 <img className='mb-14' src={realEstate} alt="" />
-                <p className='text-4xl font-semibold font-[zodiac]'>Real Estate</p>
+                <p className='text-4xl font-semibold font-zodiac'>Real Estate</p>
                 <p className='text-lg mt-4'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
                 <img className='mb-14' src={automobile} alt="" />
-                <p className='text-4xl font-semibold font-[zodiac]'>Automobile</p>
+                <p className='text-4xl font-semibold font-zodiac'>Automobile</p>
                 <p className='text-lg mt-4'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
         </div>
         <div className="flex justify-between gap-8 mt-8">
-            <div className='p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
                 <img className='mb-14' src={distribution} alt="" />
-                <p className='text-4xl font-semibold font-[zodiac]'>Distribution</p>
+                <p className='text-4xl font-semibold font-zodiac'>Distribution</p>
                 <p className='text-lg mt-4'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(2)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(2)}>
                 <img className='mb-14' src={textile} alt="" />
-                <p className='text-4xl font-semibold font-[zodiac]'>Textile</p>
+                <p className='text-4xl font-semibold font-zodiac'>Textile</p>
                 <p className='text-lg mt-4'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(3)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(3)}>
                 <img className='mb-14' src={farming} alt="" />
-                <p className='text-4xl font-semibold font-[zodiac]'>Farming</p>
+                <p className='text-4xl font-semibold font-zodiac'>Farming</p>
                 <p className='text-lg mt-4'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
         </div>

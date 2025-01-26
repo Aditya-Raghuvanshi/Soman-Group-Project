@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const navigate=useNavigate();
   return (
-    <div className='sticky top-0 px-20 py-3 border-2 border-d border-gray-300 bg-white'>
+    <div className='sticky top-0 px-20 py-3 border-2 border-d border-gray-300 bg-white z-10'>
         <div className='flex justify-between'>
             <div className='flex flex-col'>
                 <img src={CompanyLogo} alt="" />
