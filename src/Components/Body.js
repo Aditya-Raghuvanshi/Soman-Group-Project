@@ -8,8 +8,8 @@ const Body = () => {
   useEffect(()=>{
     setTimeout(()=>{
       setLoading(false);
-    },4000)
-  },0)
+    },4500)
+  },[])
   return loading?<Loader/> : (
     <div>
       <Navbar/>

@@ -116,6 +116,7 @@ const DomainContainer = () => {
     })
   }
   useEffect(()=>{
+    const container = containerRef.current;
     const handleIntersection = (entries, observer) =>{
       entries.forEach(entry=>{
         if (entry.isIntersecting){
@@ -162,14 +163,14 @@ const DomainContainer = () => {
       threshold: 0.1, // Trigger when 30% of the element is in the viewport
     });
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    if (container) {
+      observer.observe(container);
     }
 
     // Clean up the observer when the component is unmounted
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (container) {
+        observer.unobserve(container);
       }
     };
   },[])
