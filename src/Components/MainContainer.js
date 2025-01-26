@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import HomeHero from './HomeHero'
-import HomeImage1 from '../assets/images/hero_image.png'
+// import HomeImage1 from '../assets/images/hero_image.png'
+import HomeImage1 from '../assets/images/MainImg.png'
 import MidContainer from './MidContainer'
 import DomainContainer from './DomainContainer'
 import Contact from './Contact'
@@ -20,9 +21,10 @@ const MainContainer = () => {
     <div className='scroll-smooth h-[100vh]'>
       <HomeHero/>
       <div className='w-full'>
-        <img className='image7 w-full absolute top-72 md:top-64 lg:top-64 -z-20' src={HomeImage1} alt="" />
+      {/* absolute top-72 md:top-64 lg:top-64 -z-20 */}
+        <img className='image7 w-full ' src={HomeImage1} alt="" />
     </div>
-    <div className='w-full flex justify-center mt-[365px] py-8 bg-[#101828]'>
+    <div className='w-full flex justify-center py-8 bg-[#101828]'>
         <div className='w-full flex justify-between'>
             <div className='px-24 border-r-2 border-gray-600'><p className='text-6xl text-white font-semibold font-zodiac'>60+</p><p className='text-[#A2A2A2] pt-2'>locations</p></div>
             <div className='px-24 border-r-2 border-gray-600'><p className=' text-6xl text-white font-semibold text-center font-zodiac'>5</p><p className='text-[#A2A2A2] pt-2'>benchmark industries</p></div>
