@@ -4,11 +4,8 @@ import "./loader.css";
 const Loader = () => {
     const [count,setCount]=useState(1);
     useEffect(()=>{
-        // Calculate how many milliseconds per count
-    const intervalTime = 4000 / 100; // 4 seconds divided by 100 counts
-    
-    // Set up the interval to update the count every 40ms
-    const interval = setInterval(() => {
+      const intervalTime = 3000 / 100; 
+      const interval = setInterval(() => {
       setCount(prevCount => {
         if (prevCount === 100) {
           clearInterval(interval); // Stop the interval once it reaches 100

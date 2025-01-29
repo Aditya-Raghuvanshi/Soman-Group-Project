@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'zodiac': ['Zodiak', 'serif'],
+        'outfit': ['Outfit','serif'],
       },
     },
   },

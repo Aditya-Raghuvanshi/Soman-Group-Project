@@ -8,7 +8,7 @@ const Body = () => {
   useEffect(()=>{
     setTimeout(()=>{
       setLoading(false);
-    },4500)
+    },3500)
   },[])
   return loading?<Loader/> : (
     <div>
