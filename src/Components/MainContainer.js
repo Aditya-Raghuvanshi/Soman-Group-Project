@@ -13,8 +13,8 @@ const MainContainer = () => {
   useEffect(()=>{
     gsap.fromTo(
       '.image7', 
-      { scale: 0.8, opacity: 0 }, // Start smaller and invisible
-      { scale: 1, opacity: 1, duration: 4, ease: "power2.out" } // Scale to normal size
+      { opacity: 0,y:70 }, // Start smaller and invisible
+      { opacity: 1,y:0 ,duration: 2,delay:1.5, ease: "power2.out" } // Scale to normal size
     );
   },[])
   return (

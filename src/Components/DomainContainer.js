@@ -120,31 +120,33 @@ const DomainContainer = () => {
     const handleIntersection = (entries, observer) =>{
       entries.forEach(entry=>{
         if (entry.isIntersecting){
-          const letters = document.querySelectorAll('.domain-text span');
+          // const letters = document.querySelectorAll('.domain-text span');
 
           // GSAP staggered animation for the letters
           gsap.fromTo(
-            letters, 
-            { opacity: 0, y: -50 },  // Start with letters off-screen and transparent
+            '.domain-text', 
+            { opacity: 0, y: 50 },  // Start with letters off-screen and transparent
             { 
               opacity: 1, 
               y: 0, 
               duration: 1, 
+              delay:0.2,
               stagger: 0.1,  // Stagger the animation by 0.1 seconds per letter
               ease: "ease.out"  // Smooth easing effect
             }
           );
 
-          const letters1 = document.querySelectorAll('.domain-text1 span');
+          // const letters1 = document.querySelectorAll('.domain-text1 span');
 
           // GSAP staggered animation for the letters
           gsap.fromTo(
-            letters1, 
-            { opacity: 0, y: -50 },  // Start with letters off-screen and transparent
+            '.domain-text1', 
+            { opacity: 0, y: 50 },  // Start with letters off-screen and transparent
             { 
               opacity: 1, 
               y: 0, 
               duration: 1, 
+              delay:0.5,
               stagger: 0.1,  // Stagger the animation by 0.1 seconds per letter
               ease: "ease.out"  // Smooth easing effect
             }
@@ -152,8 +154,8 @@ const DomainContainer = () => {
 
           gsap.fromTo(
             '.image3', 
-            { scale: 0.8, opacity: 0 }, // Start smaller and invisible
-            { scale: 1, opacity: 1, duration: 4, ease: "power2.out" } // Scale to normal size
+            { opacity: 0 ,y:50}, // Start smaller and invisible
+            { opacity: 1,y:0, duration: 4,delay:0.8, ease: "power2.out" } // Scale to normal size
           );
           observer.unobserve(entry.target);
         }
@@ -175,11 +177,11 @@ const DomainContainer = () => {
     };
   },[])
 
-  const splitText = (text) => {
-    return text.split('').map((letter, index) => (
-      letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
-    ));
-  };
+  // const splitText = (text) => {
+  //   return text.split('').map((letter, index) => (
+  //     letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
+  //   ));
+  // };
   
   return (
     <div ref={containerRef} className='p-28'>
@@ -190,10 +192,10 @@ const DomainContainer = () => {
             <p className='text-[#996830] text-sm ml-4'>OUR DOMAINS</p>
         </div>
         <p className='domain-text text-6xl w-[50%] font-semibold font-zodiac'>
-          {splitText('We lead & drive')}
+          We lead & drive
         </p>
         <p className='domain-text1 text-6xl font-semibold mb-20 font-zodiac hero-text1'>
-          {splitText('benchmark industries')}
+          benchmark industries
         </p>
       </div>
       <div>

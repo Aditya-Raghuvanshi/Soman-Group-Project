@@ -40,31 +40,42 @@ const MidContainer = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           // Trigger animations when the component enters the viewport
-          const letters = document.querySelectorAll('.about-text span');
+          // const letters = document.querySelectorAll('.about-text span');
 
           // GSAP staggered animation for the letters
           gsap.fromTo(
-            letters, 
-            { opacity: 0, y: -50 },  // Start with letters off-screen and transparent
+            '.about-text', 
+            { opacity: 0, y: 70 },  // Start with letters off-screen and transparent
             { 
               opacity: 1, 
               y: 0, 
-              duration: 1, 
-              stagger: 0.1,  // Stagger the animation by 0.1 seconds per letter
+              duration: 2,
+              delay:0.2, 
+              ease: "ease.out"  // Smooth easing effect
+            }
+          );
+          gsap.fromTo(
+            '.about-text1', 
+            { opacity: 0, y: 70 },  // Start with letters off-screen and transparent
+            { 
+              opacity: 1, 
+              y: 0, 
+              duration: 2,
+              delay:0.5, 
               ease: "ease.out"  // Smooth easing effect
             }
           );
 
           gsap.fromTo(
             '.image1', 
-            { scale: 0.8, opacity: 0 }, // Start smaller and invisible
-            { scale: 1, opacity: 1, duration: 4, ease: "power2.out" } // Scale to normal size
+            { opacity: 0, y:100 }, // Start smaller and invisible
+            { opacity: 1, y:0 , duration: 4,delay:0.7,  ease: "power2.out" } // Scale to normal size
           );
 
           gsap.fromTo(
             '.image2', 
-            { scale: 0.8, opacity: 0 }, // Start smaller and invisible
-            { scale: 1, opacity: 1, duration: 4, ease: "power2.out" } // Scale to normal size
+            { opacity: 0, y:100 }, // Start smaller and invisible
+            { opacity: 1, y:0, duration: 4,delay:0.8, ease: "power2.out" } // Scale to normal size
           );
 
           // Stop observing once the animations have been triggered
@@ -89,11 +100,11 @@ const MidContainer = () => {
     };
   }, []);
 
-  const splitText = (text) => {
-    return text.split('').map((letter, index) => (
-      letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
-    ));
-  };
+  // const splitText = (text) => {
+  //   return text.split('').map((letter, index) => (
+  //     letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
+  //   ));
+  // };
 
   return (
     <div ref={containerRef} className='px-28 pt-32 pb-24'>
@@ -103,8 +114,8 @@ const MidContainer = () => {
             <img className='w-16' src={horizontalLine} alt="" />
             <p className='text-sm text-[#996830] ml-4'>ABOUT US</p>
           </div>
-          <p className='about-text text-7xl my-6 font-zodiac'>{splitText('Since 1968')}</p>
-          <p className='text-[#444444] text-base w-[80%]'>
+          <p className='about-text text-7xl my-6 font-zodiac'>Since 1968</p>
+          <p className='about-text1 text-[#444444] text-base w-[80%]'>
             Founded by the a founder late Mr. Motilal Somani and his late son Mr. Champalal Motilal Somani, the Somani Group is one of the most respected and renowned business houses of Baramati & Maharashtra
           </p>
         </div>
