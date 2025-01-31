@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap';
+import HeroGraphic from '../assets/hero_graphics.svg'
 
 const HomeHero = () => {
 
@@ -22,9 +23,20 @@ const HomeHero = () => {
       y: 0,
       opacity: 1,
       duration: 2,
-      delay:0.3,
+      delay:0.4,
       ease: 'power4.out',
     });
+
+    gsap.fromTo('.hero-graphic',
+      { opacity: 0, y: 50 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 4,
+        delay:0.3,
+        ease: 'power4.out',
+      }
+    );
   }, []);
 
   // Helper function to split the text into individual letters
@@ -45,6 +57,7 @@ const HomeHero = () => {
           <p className='description-text w-1/2 text-[#444444] mt-4 font-outfit'>
             We at <b>Somani Group</b> drive transparent and open business practices to translate our honest and authentic beliefs about responsibility into anything we venture into.
           </p>
+          <img className='overflow-hidden hero-graphic absolute top-28 left-0 w-full' src={HeroGraphic} alt="" />
         </div>
     </div>
   )

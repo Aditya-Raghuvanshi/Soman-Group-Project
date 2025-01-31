@@ -3,6 +3,7 @@ import './App.css';
 import Body from './Components/Body';
 import IndustryComponent from './Components/IndustryComponent';
 import ProfilePage from './Components/ProfilePage';
+import LegacyPage from './Components/LegacyPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element={<Body/>} />
         <Route path='/industry' element={<IndustryComponent/>} />
         <Route path='/profile' element={<ProfilePage/>} />
+        <Route path='/legacy' element={<LegacyPage/>} />
       </Routes>
     </div>
   );

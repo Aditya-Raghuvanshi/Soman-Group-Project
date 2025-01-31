@@ -199,7 +199,7 @@ const DomainContainer = () => {
         </p>
       </div>
       <div>
-        <div className="flex justify-between gap-14">
+        <div className="flex justify-between gap-8">
             <div className='image3 p-10 border border-[#E6D8CC]'>
                 <img className='mb-14' src={realEstate} alt="" />
                 <p className='text-4xl font-semibold font-zodiac'>Real Estate</p>

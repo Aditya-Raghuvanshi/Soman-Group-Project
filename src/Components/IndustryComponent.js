@@ -19,7 +19,6 @@ const IndustryComponent = () => {
     const headerPhoto = [AutoMobileHeader,DistributionHeader,textileHeader,AgricultureHeader];
     const {state}=useLocation();
     const data = state?.data;
-    console.log(data);
     useEffect(()=>{
         window?.scrollTo({top:0,behavior:'smooth'});
     },[])

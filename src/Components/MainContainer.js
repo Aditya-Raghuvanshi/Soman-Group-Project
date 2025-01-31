@@ -16,7 +16,7 @@ const MainContainer = () => {
     gsap.fromTo(
       '.image7', 
       { opacity: 0,y:70 }, // Start smaller and invisible
-      { opacity: 1,y:0 ,duration: 2,delay:1.5, ease: "power2.out" } // Scale to normal size
+      { opacity: 1,y:0 ,duration: 2,delay:1, ease: "power2.out" } // Scale to normal size
     );
     gsap.fromTo(
       '.matrix-text',

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./loader.css";
+import gsap from "gsap";
 
 const Loader = () => {
     const [count,setCount]=useState(1);
@@ -13,6 +14,11 @@ const Loader = () => {
         }
         return prevCount + 1;
       });
+      gsap.to('.loader',2,{
+        top:"-100%",
+        ease: "power4.out",
+        delay: 4,
+      })
     }, intervalTime);
 
     // Cleanup the interval when the component unmounts

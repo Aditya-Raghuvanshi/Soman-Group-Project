@@ -1,0 +1,34 @@
+.first{
+    background-image: url('../assets/images/SugaranceFarming.svg');
+    background-size: cover;
+    background-position: center;
+    width:50%;
+}
+
+.second{
+    background-image: url('../assets/images/LeagacyRealEstate.svg');
+    background-size: cover;
+    background-position: center;
+    width:50%;
+}
+
+.third{
+    background-image: url('../assets/images/SugaranceFarming.svg');
+    background-size: cover;
+    background-position: center;
+    width:50%;
+}
+
+.fourth{
+    background-image: url('../assets/images/TextileLegacy.svg');
+    background-size: cover;
+    background-position: center;
+    width:50%;
+}
+
+.fifth{
+    background-image: url('../assets/images/DistributionLegacy.svg');
+    background-size: cover;
+    background-position: center;
+    width:50%;
+}

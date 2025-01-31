@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Navbar from './Navbar'
 import GroupImage from '../assets/images/GroupImage.svg'
 import horizontalLine from '../assets/horizontal-line.svg'
@@ -12,13 +12,126 @@ import Leader6 from '../assets/images/Leader6.svg'
 import Contact from './Contact'
 import RealEstateStar from '../assets/images/ReaslEstateStar.svg'
 import AwardImage from '../assets/images/AwardImage.svg'
+import gsap from 'gsap'
 
 const ProfilePage = () => {
+    const containerRef = useRef(null);
+    useEffect(()=>{
+        const container = containerRef.current;
+        gsap.fromTo('.profileMainDiv',
+            {opacity:0,y:50},
+            {
+                opacity:1,
+                y:0,
+                delay:0.2,
+                duration:1.5,
+                ease:"power2.out",
+            }
+        )
+        const handleIntersection = (entries, observer) =>{
+            entries.forEach(entry=>{
+                if (entry.isIntersecting){
+                    gsap.fromTo(
+                        '.leaderHead',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:0.1,
+                            duration:1.5,
+                            ease:"ease.out",
+                        }
+                    )
+                    gsap.fromTo(
+                        '.profile1',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:0.2,
+                            duration:1.5,
+                            ease:"power2.out",
+                        }
+                    )
+                    gsap.fromTo(
+                        '.profile2',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:0.4,
+                            duration:1.5,
+                            ease:"power2.out",
+                        }
+                    )
+                    gsap.fromTo(
+                        '.profile3',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:0.6,
+                            duration:1.5,
+                            ease:"power2.out",
+                        }
+                    )
+                    gsap.fromTo(
+                        '.profile4',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:0.8,
+                            duration:1.5,
+                            ease:"power2.out",
+                        }
+                    )
+                    gsap.fromTo(
+                        '.profile5',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:1,
+                            duration:1.5,
+                            ease:"power2.out",
+                        }
+                    )
+                    gsap.fromTo(
+                        '.profile6',
+                        {opacity:0,y:50},
+                        {
+                            opacity:1,
+                            y:0,
+                            delay:1.2,
+                            duration:1.5,
+                            ease:"power2.out",
+                        }
+                    )
+                    observer.unobserve(entry.target);
+                }
+            })
+        }
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.1, // Trigger when 30% of the element is in the viewport
+        });
+    
+        if (container) {
+            observer.observe(container);
+        }
+    
+        // Clean up the observer when the component is unmounted
+        return () => {
+            if (container) {
+                observer.unobserve(container);
+            }
+        };
+    },[])
   return (
     <div>
         <Navbar/>
         <img className='absolute -z-50 top-0 w-full' src={GroupImage} alt="Group img" />
-        <div className='flex justify-between bg-[#0B6476] mx-28 mt-[534px] p-14'>
+        <div className='profileMainDiv flex justify-between bg-[#0B6476] mx-28 mt-[534px] p-14'>
             <p className='text-5xl text-white font-zodiac'>Our Profile</p>
             <div>
                 <div className="flex mb-6">
@@ -34,10 +147,10 @@ const ProfilePage = () => {
             </div>
         </div>
         <div className='p-20'>
-            <div>
-                <p className='text-3xl font-bold mb-12'>The leaders behind our success...</p>
+            <div ref={containerRef}>
+                <p className='leaderHead text-3xl font-bold mb-12'>The leaders behind our success...</p>
                 <div className='flex gap-8 justify-between'>
-                    <div className='border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile1 border border-[#E6D8CC] p-6 w-96'>
                         <img className='w-full' src={Leader1} alt="" />
                         <p>Sushil Somani</p>
                         <div>
@@ -55,7 +168,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile2 border border-[#E6D8CC] p-6 w-96'>
                         <img className='w-full' src={Leader2} alt="" />
                         <p>Subhash Somani</p>
                         <div>
@@ -73,7 +186,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile3 border border-[#E6D8CC] p-6 w-96'>
                         <img className='w-full' src={Leader3} alt="" />
                         <p>Mahesh Somani</p>
                         <div>
@@ -89,7 +202,7 @@ const ProfilePage = () => {
                     </div>
                 </div>
                 <div className='flex mt-12 justify-between'>
-                    <div className='border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile4 border border-[#E6D8CC] p-6 w-96'>
                         <img className='w-full' src={Leader4} alt="" />
                         <p>Ketan Somani</p>
                         <div>
@@ -107,7 +220,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile5 border border-[#E6D8CC] p-6 w-96'>
                         <img className='w-full' src={Leader5} alt="" />
                         <p>Omkar Somani</p>
                         <div>
@@ -121,7 +234,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile6 border border-[#E6D8CC] p-6 w-96'>
                         <img className='w-full' src={Leader6} alt="" />
                         <p>Pranav Somani</p>
                         <div>
