@@ -52,7 +52,7 @@ const Contact = () => {
             </div>
             <div>
                 <p className='text-2xl text-[#2C2C2C] font-semibold font-zodiac'>Baramati, Pune</p>
-                <p className='text-sm text-[#2C2C2C]'>Somani Heights, Near Urja Bhavan, Bhigwan Road, Baramati, Pune 413102</p>
+                <p className='text-sm text-[#2C2C2C] font-outfit'>Somani Heights, Near Urja Bhavan, Bhigwan Road, Baramati, Pune 413102</p>
             </div>
         </div>
     </div>
