@@ -16,6 +16,17 @@ const DomainContainer = () => {
   const array = [
     {
       img:0,
+      title:'Real Estate',
+      projects:[
+        {
+          id:1,
+          title:'Realty',
+          description:'The Somani Group ventured into the real estate sector in early 2023, marking a new chapter in our journey of growth and innovation. In just two years, we have made significant strides, establishing ourselves as a trusted name in residential and commercial real estate. With a commitment to quality, transparency, and customer satisfaction, we have been aggressively expanding our footprint in this sector. Currently in 2 years  we have an impressive 6 lakh square feet of projects under construction, catering to diverse needs and preferences. At Somani Group, we believe in building more than just structures – we create spaces that inspire, connect, and uplift communities. With a focus on sustainable practices and cutting-edge designs, we are redefining the landscape of real estate in Pune, Baramati, and beyond.',
+        },
+      ]
+    },
+    {
+      img:1,
       title:'Automobile Dealerships',
       projects:[
         {
@@ -35,7 +46,7 @@ const DomainContainer = () => {
       ]
     },
     {
-      img:1,
+      img:2,
       title:'Distributorship',
       projects:[
         {
@@ -75,7 +86,7 @@ const DomainContainer = () => {
       ]
     },
     {
-      img:2,
+      img:3,
       title:'Textiles',
       projects:[
         {
@@ -97,7 +108,7 @@ const DomainContainer = () => {
       ]
     },
     {
-      img:3,
+      img:4,
       title:'Agriculture',
       projects:[
         {
@@ -200,29 +211,29 @@ const DomainContainer = () => {
       </div>
       <div>
         <div className="flex justify-between gap-8">
-            <div className='image3 p-10 border border-[#E6D8CC]'>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
                 <img className='mb-14' src={realEstate} alt="" />
                 <p className='text-4xl font-semibold font-zodiac'>Real Estate</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
                 <img className='mb-14' src={automobile} alt="" />
                 <p className='text-4xl font-semibold font-zodiac'>Automobile</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
         </div>
         <div className="flex justify-between gap-8 mt-8">
-            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(2)}>
                 <img className='mb-14' src={distribution} alt="" />
                 <p className='text-4xl font-semibold font-zodiac'>Distribution</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(2)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(3)}>
                 <img className='mb-14' src={textile} alt="" />
                 <p className='text-4xl font-semibold font-zodiac'>Textile</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(3)}>
+            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(4)}>
                 <img className='mb-14' src={farming} alt="" />
                 <p className='text-4xl font-semibold font-zodiac'>Farming</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>

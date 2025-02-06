@@ -5,6 +5,7 @@ import textileHeader from '../assets/images/TextileHeader.svg'
 import AutoMobileHeader from '../assets/images/AutoMobileHeader.svg'
 import DistributionHeader from '../assets/images/DistributionHeader.svg'
 import AgricultureHeader from '../assets/images/AgricultureHeader.svg'
+import RealEstateHeader from '../assets/images/RealEstateHeader.svg'
 
 import homeImage from '../assets/images/homeImage.svg'
 import location from '../assets/location.svg'
@@ -17,11 +18,11 @@ import { useLocation } from 'react-router-dom'
 import gsap from 'gsap'
 
 const IndustryComponent = () => {
-    const headerPhoto = [AutoMobileHeader,DistributionHeader,textileHeader,AgricultureHeader];
+    const headerPhoto = [RealEstateHeader,AutoMobileHeader,DistributionHeader,textileHeader,AgricultureHeader];
     const {state}=useLocation();
     const containerRef = useRef();
     const data = state?.data;
-    
+
     useEffect(()=>{
         window?.scrollTo({top:0,behavior:'smooth'});
         const container = containerRef.current;

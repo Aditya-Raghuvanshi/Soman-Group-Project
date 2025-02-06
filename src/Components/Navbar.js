@@ -8,6 +8,17 @@ const Navbar = () => {
   const array = [
     {
       img:0,
+      title:'Real Estate',
+      projects:[
+        {
+          id:1,
+          title:'Realty',
+          description:'The Somani Group ventured into the real estate sector in early 2023, marking a new chapter in our journey of growth and innovation. In just two years, we have made significant strides, establishing ourselves as a trusted name in residential and commercial real estate. With a commitment to quality, transparency, and customer satisfaction, we have been aggressively expanding our footprint in this sector. Currently in 2 years  we have an impressive 6 lakh square feet of projects under construction, catering to diverse needs and preferences. At Somani Group, we believe in building more than just structures – we create spaces that inspire, connect, and uplift communities. With a focus on sustainable practices and cutting-edge designs, we are redefining the landscape of real estate in Pune, Baramati, and beyond.',
+        },
+      ]
+    },
+    {
+      img:1,
       title:'Automobile Dealerships',
       projects:[
         {
@@ -27,7 +38,7 @@ const Navbar = () => {
       ]
     },
     {
-      img:1,
+      img:2,
       title:'Distributorship',
       projects:[
         {
@@ -67,7 +78,7 @@ const Navbar = () => {
       ]
     },
     {
-      img:2,
+      img:3,
       title:'Textiles',
       projects:[
         {
@@ -89,7 +100,7 @@ const Navbar = () => {
       ]
     },
     {
-      img:3,
+      img:4,
       title:'Agriculture',
       projects:[
         {
@@ -128,10 +139,11 @@ const Navbar = () => {
                   {/* Dropdown Options */}
                   <div className='absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-40 z-10'>
                     <ul className='py-2'>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Automobile</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Distribution</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Textile</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Farming</li>
+                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Real Estate</li>
+                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Automobile</li>
+                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Distribution</li>
+                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Textile</li>
+                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(4)}>Farming</li>
                     </ul>
                   </div>
                 </div>
