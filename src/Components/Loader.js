@@ -29,7 +29,7 @@ const Loader = () => {
     <div className="loader bg-[#101828]">
       <div className="svg-wrapper">
       <div className="mx-auto text-white"><img src={LoaderIcon} alt="" /></div>
-        <p className="text-white mx-auto">{count} %</p>
+        <p className="text-white mx-auto font-zodiac font-semibold">{count} %</p>
       </div>
     </div>
   );

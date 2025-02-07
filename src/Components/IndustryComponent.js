@@ -7,7 +7,7 @@ import DistributionHeader from '../assets/images/DistributionHeader.svg'
 import AgricultureHeader from '../assets/images/AgricultureHeader.svg'
 import RealEstateHeader from '../assets/images/RealEstateHeader.svg'
 
-import homeImage from '../assets/images/homeImage.svg'
+// import homeImage from '../assets/images/homeImage.svg'
 import location from '../assets/location.svg'
 import people from '../assets/people.svg'
 // import area from '../assets/area.svg'
@@ -16,6 +16,7 @@ import somanGroupLogo from '../assets/soman-group-logo.svg'
 import Contact from './Contact'
 import { useLocation } from 'react-router-dom'
 import gsap from 'gsap'
+import Carousal from './Carousal'
 
 const IndustryComponent = () => {
     const headerPhoto = [RealEstateHeader,AutoMobileHeader,DistributionHeader,textileHeader,AgricultureHeader];
@@ -109,7 +110,7 @@ const IndustryComponent = () => {
         {
             data?.projects?.map((item,index)=>{
                 return <div className={`my-16 flex justify-between imageHome${index}`}>
-                    <div className='my-auto'>
+                    <div className='my-auto w-[80%]'>
                         <div className="flex mb-6">
                             <img className='w-16' src={horizontalLine} alt="" />
                             <p className='text-[#996830] text-sm ml-4'># {item?.id}</p>
@@ -138,7 +139,9 @@ const IndustryComponent = () => {
                             </div> */}
                         </div>
                     </div>
-                    <img src={homeImage} alt="" />
+                    <div className='w-full h-full my-auto'>
+                    <Carousal title={data?.title}/>
+                    </div>
                 </div>
             })
         }

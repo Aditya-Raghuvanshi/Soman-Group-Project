@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import Navbar from './Navbar'
-import GroupImage from '../assets/images/GroupImage.svg'
+import GroupImage from '../assets/images/GroupImage.jpg'
 import horizontalLine from '../assets/HorizontalLineProfile.svg'
 import starLogo from '../assets/star-logo.svg'
 import Leader1 from '../assets/images/Leader1.svg'
 import Leader2 from '../assets/images/Leader2.svg'
 import Leader3 from '../assets/images/Leader3.svg'
-import Leader4 from '../assets/images/Leader4.svg'
+import Leader4 from '../assets/images/Leader4.jpg'
 import Leader5 from '../assets/images/Leader5.svg'
-import Leader6 from '../assets/images/Leader6.svg'
+import Leader6 from '../assets/images/Leader6.jpg'
 import Contact from './Contact'
 import RealEstateStar from '../assets/images/ReaslEstateStar.svg'
 import AwardImage from '../assets/images/AwardImage.svg'
@@ -129,7 +129,7 @@ const ProfilePage = () => {
   return (
     <div>
         <Navbar/>
-        <img className='absolute -z-50 top-0 w-full' src={GroupImage} alt="Group img" />
+        <img className='absolute h-[100vh] overflow-clip -z-50 top-6 w-full object-cover' src={GroupImage} alt="Group img" />
         <div className='profileMainDiv flex justify-between bg-[#0B6476] mx-28 mt-[478px] p-14'>
             <p className='text-5xl text-white font-zodiac mr-16'>Our Profile</p>
             <div>

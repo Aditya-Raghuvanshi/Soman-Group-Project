@@ -24,9 +24,9 @@ const Contact = () => {
             <p className='text-5xl w-[50%] font-zodiac'>Reach out to us!</p>
             <div className='w-[50%]'>
                 <p className='text-[#D6C3AC] text-xl'>Full name</p>
-                <input className='border-b border-[#D6C3AC] w-full mb-4 py-2 focus:outline-none' onChange={(e)=>{setName(e.target.value)}} type="text" />
+                <input className='border-t-0 border-x-0 border-[#D6C3AC] w-full mb-6 py-2 focus:outline-none focus:ring-0 focus:border-b focus:border-[#D6C3AC]' onChange={(e)=>{setName(e.target.value)}} type="text" />
                 <p className='text-[#D6C3AC] text-xl'>Email</p>
-                <input className='border-b border-[#D6C3AC] w-full my-2 py-2 focus:outline-none' onChange={(e)=>{setEmail(e.target.value)}} type="text" />
+                <input className='border-t-0 border-x-0 border-[#D6C3AC] w-full py-2 focus:outline-none focus:ring-0 focus:border-b focus:border-[#D6C3AC]' onChange={(e)=>{setEmail(e.target.value)}} type="text" />
                 <button className='text-white text-xs bg-[#0B6476] font-semibold mt-8 w-[120px] h-10' onClick={handleSubmit}>
                     SUBMIT
                 </button>
