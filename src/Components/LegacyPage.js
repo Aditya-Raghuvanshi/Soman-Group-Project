@@ -98,7 +98,7 @@ const LegacyPage = () => {
         </div>
         <div ref={containerRef}>
         <div className='legacyDiv1 flex w-full'>
-            <div className='first text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>1967</div>
+            <div className='first text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2015</div>
             {/* <img className='w-1/2' src={sugarFarming} alt="" /> */}
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-24'>
                 <div className='my-auto'>
@@ -112,15 +112,15 @@ const LegacyPage = () => {
             <div className='w-1/2 bg-white flex pr-8 py-24'>
                 <div className='my-auto items-end'>
                     <p className='text-3xl text-[#0B6476] font-bold font-zodiac'>Real Estate</p>
-                    <p className='text-[#0B6476] my-6 font-outfit opacity-65 text-sm'>The group ventured into real estate three years ago, establishing projects in Pune and Baramati. With a focus on quality and timely delivery, they aim to be a trusted name in real estate.</p>
+                    <p className='text-[#0B6476] my-6 font-outfit opacity-65 text-sm ml-[24%]'>The group ventured into real estate three years ago, establishing projects in Pune and Baramati. With a focus on quality and timely delivery, they aim to be a trusted name in real estate.</p>
                     <p className='flex w-full justify-end cursor-pointer'><p className='text-[#0B6476] font-outfit text-sm'>Learn More</p><img src={arrowBlue} alt="" /> </p>
                 </div>
             </div> 
             {/* <img className='w-1/2' src={RealEstate} alt="" /> */}
-            <div className='second text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'>1984</div>
+            <div className='second text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'>2022</div>
         </div>
         <div className='legacyDiv3 flex w-full'>
-            <div className='third text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2000</div>
+            <div className='third text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2008</div>
             {/* <img className='w-1/2' src={sugarFarming} alt="" /> */}
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-24'>
                 <div className='my-auto'>
@@ -134,16 +134,15 @@ const LegacyPage = () => {
             <div className='w-1/2 bg-white flex pr-8 py-24'>
                 <div className='my-auto items-end'>
                     <p className='text-3xl text-[#0B6476] font-bold font-zodiac'>Textile Business</p>
-                    <p className='text-[#0B6476] my-6 font-outfit opacity-65 text-sm'>Textiles were the first business the Somani Group ventured into, started by the late grandfather Champalal Somani in 1967 with an 800 sqft store. Today, the group operates 32+ locations with over 5 lakh sqft dedicated to delivering fabrics. Their new brand, 'The Wardrobe,' focuses on menswear for Tier 2 and Tier 3 cities. Generating over 350 crore turnover, they are transitioning into a franchise model to scale further</p>
-                    <p className='flex w-full justify-end cursor-pointer'><p className='text-[#0B6476] font-outfit text-sm'>Learn More</p><img src={arrow} alt="" /> </p>
+                    <p className='text-[#0B6476] my-6 font-outfit opacity-65 text-sm ml-[24%]'>Textiles were the first business the Somani Group ventured into, started by the late grandfather Champalal Somani in 1967 with an 800 sqft store. Today, the group operates 32+ locations with over 5 lakh sqft dedicated to delivering fabrics. Their new brand, 'The Wardrobe,' focuses on menswear for Tier 2 and Tier 3 cities. Generating over 350 crore turnover, they are transitioning into a franchise model to scale further</p>
+                    <p className='flex w-full justify-end cursor-pointer'><p className='text-[#0B6476] font-outfit text-sm'>Learn More</p><img src={arrowBlue} alt="" /> </p>
                 </div>
             </div> 
             {/* <img className='w-1/2' src={RealEstate} alt="" /> */}
-            <div className='fourth text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'>2006</div>
+            <div className='fourth text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'>1967</div>
         </div>
         <div className='legacyDiv5 flex w-full'>
-        <div className='fifth text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2014</div>
-            {/* <img className='w-1/2' src={sugarFarming} alt="" /> */}
+        <div className='fifth text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2013</div>
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-24'>
                 <div className='my-auto'>
                     <p className='text-3xl text-white font-bold font-zodiac'>Distribution Network</p>

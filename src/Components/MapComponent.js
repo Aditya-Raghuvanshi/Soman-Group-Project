@@ -9,7 +9,6 @@ const MapComponent = () => {
     const handleIntersection = (entries, observer) =>{
       entries.forEach(entry=>{
         if (entry.isIntersecting){
-          // const letters = document.querySelectorAll('.map-text span');
 
           // GSAP staggered animation for the letters
           gsap.fromTo(
@@ -23,8 +22,6 @@ const MapComponent = () => {
               ease: "power4.out"  // Smooth easing effect
             }
           );
-
-          // const letters1 = document.querySelectorAll('.map-text1 span');
 
           // GSAP staggered animation for the letters
           gsap.fromTo(
@@ -58,11 +55,6 @@ const MapComponent = () => {
       }
     };
   },[])
-  // const splitText = (text) => {
-  //   return text.split('').map((letter, index) => (
-  //     letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
-  //   ));
-  // };
 
   return (
     <div ref={containerRef} className='p-28'>

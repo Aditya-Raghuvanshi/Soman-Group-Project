@@ -32,3 +32,17 @@
     background-position: center;
     width:50%;
 }
+
+.Hero{
+    background-image: url('../assets/hero_graphics.svg');
+    background-size: 100%;
+    background-position: center;
+    width:100%;
+}
+
+.DomainBackground{
+    background-image: url('../assets/hero_graphics.svg');
+    background-size: 100%;
+    background-position: center;
+    width:100%;
+}

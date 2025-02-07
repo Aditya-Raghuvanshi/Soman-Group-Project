@@ -131,9 +131,7 @@ const DomainContainer = () => {
     const handleIntersection = (entries, observer) =>{
       entries.forEach(entry=>{
         if (entry.isIntersecting){
-          // const letters = document.querySelectorAll('.domain-text span');
-
-          // GSAP staggered animation for the letters
+          
           gsap.fromTo(
             '.domain-text', 
             { opacity: 0, y: 50 },  // Start with letters off-screen and transparent
@@ -142,14 +140,11 @@ const DomainContainer = () => {
               y: 0, 
               duration: 1, 
               delay:0.2,
-              stagger: 0.1,  // Stagger the animation by 0.1 seconds per letter
-              ease: "ease.out"  // Smooth easing effect
+              stagger: 0.1,  
+              ease: "ease.out"  
             }
           );
 
-          // const letters1 = document.querySelectorAll('.domain-text1 span');
-
-          // GSAP staggered animation for the letters
           gsap.fromTo(
             '.domain-text1', 
             { opacity: 0, y: 50 },  // Start with letters off-screen and transparent
@@ -188,16 +183,9 @@ const DomainContainer = () => {
     };
   },[])
 
-  // const splitText = (text) => {
-  //   return text.split('').map((letter, index) => (
-  //     letter===' '?<span key={index}>&nbsp;</span>: <span key={index} className="inline-block">{letter}</span>
-  //   ));
-  // };
-  
   return (
     <div ref={containerRef} className='p-28'>
-      <div>
-      {/* <img className='absolute top-[1600px] left-0 rotate-[15deg]' src={heroGraphic} alt="" /> */}
+      <div className=''>
         <div className="flex mb-6">
             <img className='w-16' src={horizontalLine} alt="" />
             <p className='text-[#996830] text-sm ml-4'>OUR DOMAINS</p>

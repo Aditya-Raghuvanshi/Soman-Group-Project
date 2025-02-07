@@ -120,7 +120,6 @@ const ProfilePage = () => {
             observer.observe(container);
         }
     
-        // Clean up the observer when the component is unmounted
         return () => {
             if (container) {
                 observer.unobserve(container);
