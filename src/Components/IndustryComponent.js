@@ -9,7 +9,7 @@ import RealEstateHeader from '../assets/images/RealEstateHeader.svg'
 
 // import homeImage from '../assets/images/homeImage.svg'
 import location from '../assets/location.svg'
-import people from '../assets/people.svg'
+// import people from '../assets/people.svg'
 // import area from '../assets/area.svg'
 import horizontalLine from '../assets/horizontal-line.svg'
 import somanGroupLogo from '../assets/soman-group-logo.svg'
@@ -118,7 +118,7 @@ const IndustryComponent = () => {
                         <p className='text-3xl font-semibold font-zodiac'>{item?.title}</p>
                         <p className='text-lg text-[#444444] w-[80%] mt-6 font-outfit'>{item?.description}</p>
 
-                        <div className='flex flex-wrap pr-2 my-6'>
+                        <div className='flex flex-wrap gap-2 w-[80%] my-6'>
                             {
                                 item?.locations?.map((loc)=>{
                                     return <p className='flex gap-1 p-1'>
@@ -129,18 +129,18 @@ const IndustryComponent = () => {
                             }
                         </div>
                         <div className='flex my-6 gap-3'>
-                            <div className='flex gap-1'>
+                            {/* <div className='flex gap-1'>
                                 <img src={people} alt="" />
                                 <p>{item?.people} people</p>
-                            </div>
+                            </div> */}
                             {/* <div className='flex gap-1'>
                                 <img src={area} alt="" />
                                 <p>{item?.area}</p>
                             </div> */}
                         </div>
                     </div>
-                    <div className='w-full h-full my-auto'>
-                    <Carousal title={data?.title}/>
+                    <div className='w-[65%] h-full my-auto'>
+                    <Carousal title={data?.title} subTitle={item?.title}/>
                     </div>
                 </div>
             })

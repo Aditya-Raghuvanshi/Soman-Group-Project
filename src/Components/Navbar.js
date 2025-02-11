@@ -47,7 +47,7 @@ const Navbar = () => {
           description:'We started working with TATA in the year 2013. Gradually got appointed as an authorized distributor of TATA Genuine spare parts for commercial vehicles for entire Maharashtra (Excluding Mumbai). We also act as a supplier to TASS i.e. TATA authorized service station. We have warehouses located at the cities known as business hubs in Maharashtra namely:',
           locations:['Pune','Nagpur','Nashik'],
           people:54,
-          area:'40,000+ sq.ft Warehouse'
+          area:'40,000+ sq.ft Warehouse',
         },
         {
           id:2,

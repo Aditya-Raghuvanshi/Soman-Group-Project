@@ -32,27 +32,27 @@ const Contact = () => {
                 </button>
             </div>
         </div>
-        <div className='flex justify-between mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
+        <div className='flex justify-between gap-4 mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
             <div>
                 <p className='text-sm text-[#2C2C2C]'>Follow us on</p>
-                <div className='flex gap-4 mt-2'>
-                    <img src={instagramIcon} alt="" />
-                    <img src={facebookIcon} alt="" />
-                    <img src={youtubeIcon} alt="" />
-                    <img src={twitterIcon} alt="" />
+                <div className='flex flex-wrap gap-4 mt-2'>
+                    <img className='md:w-6 md:h-6 lg:w-10 lg:h-10' src={instagramIcon} alt="" />
+                    <img className='md:w-6 md:h-6 lg:w-10 lg:h-10' src={facebookIcon} alt="" />
+                    <img className='md:w-6 md:h-6 lg:w-10 lg:h-10' src={youtubeIcon} alt="" />
+                    <img className='md:w-6 md:h-6 lg:w-10 lg:h-10' src={twitterIcon} alt="" />
                 </div>
             </div>
             <div>
                 <p className='text-sm text-[#2C2C2C]'>Email us at</p>
-                <p className='text-xl text-[#996830] font-semibold font-zodiac'>contact@somanigroup.com</p>
+                <p className='text-xs md:text-base lg:text-xl text-[#996830] font-semibold font-zodiac'>contact@somanigroup.com</p>
             </div>
             <div>
                 <p className='text-sm text-[#2C2C2C]'>Give us a call at</p>
-                <p className='text-xl text-[#996830] font-semibold font-zodiac'>+91 75077 71803</p>
+                <p className='text-xs md:text-base lg:text-xl text-[#996830] font-semibold font-zodiac'>+91 75077 71803</p>
             </div>
             <div>
-                <p className='text-2xl text-[#2C2C2C] font-semibold font-zodiac'>Baramati, Pune</p>
-                <p className='text-sm text-[#2C2C2C] font-outfit'>Somani Heights, Near Urja Bhavan, Bhigwan Road, Baramati, Pune 413102</p>
+                <p className='text-base md:text-lg lg:text-2xl text-[#2C2C2C] font-semibold font-zodiac'>Baramati, Pune</p>
+                <p className='text-xs md:text-xs lg:text-sm text-[#2C2C2C] font-outfit'>Somani Heights, Near Urja Bhavan, Bhigwan Road, Baramati, Pune 413102</p>
             </div>
         </div>
     </div>

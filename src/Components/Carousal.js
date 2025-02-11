@@ -15,13 +15,21 @@ import DistributionImage6 from '../assets/images/DistributionImage6.jpg'
 import AutomobileImage1 from '../assets/images/AutomobileImage1.jpg'
 import AutomobileImage2 from '../assets/images/AutomobileImage2.jpg'
 import AutomobileImage3 from '../assets/images/AutomobileImage3.jpg'
+import ChetakImage1 from '../assets/images/ChetakImage1.jpg'
+import ChetakImage2 from '../assets/images/ChetakImage2.jpg'
+import ChetakImage3 from '../assets/images/ChetakImage3.jpg'
+import ChetakImage4 from '../assets/images/ChetakImage4.jpg'
 import TextileImage1 from '../assets/images/TextileImage1.jpg'
 import TextileImage2 from '../assets/images/TextileImage2.jpg'
 import TextileImage3 from '../assets/images/TextileImage3.jpg'
+import RajasthanTextileImage1 from '../assets/images/RajasthanTextileImage1.jpg'
+import RajasthanTextileImage2 from '../assets/images/RajasthanTextileImage2.jpg'
+import RajasthanTextileImage3 from '../assets/images/RajasthanTextileImage3.jpg'
+import RajasthanTextileImage4 from '../assets/images/RajasthanTextileImage4.jpg'
 import { Carousel } from 'flowbite-react'
 // import { Carousel } from "flowbite-react";
 
-const Carousal = ({title}) => {
+const Carousal = ({title,subTitle}) => {
   return (
     <>
         <div className="py-4 sm:h-64 xl:h-80 2xl:h-96">
@@ -48,17 +56,33 @@ const Carousal = ({title}) => {
         </Carousel>
         }
         {
-            title==='Automobile Dealerships' && <Carousel>
+            title==='Automobile Dealerships' && subTitle!=='BAJAJ' && <Carousel>
             <img src={AutomobileImage1} alt="..." />
             <img src={AutomobileImage2} alt="..." />
             <img src={AutomobileImage3} alt="..." />
         </Carousel>
         }
         {
-            title==='Textiles' && <Carousel>
+            title==='Automobile Dealerships' && subTitle==='BAJAJ' && <Carousel>
+            <img src={ChetakImage1} alt="..." />
+            <img src={ChetakImage2} alt="..." />
+            <img src={ChetakImage3} alt="..." />
+            <img src={ChetakImage4} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Textiles' && subTitle!=='RAJASTHAN GROUP' && <Carousel>
             <img src={TextileImage1} alt="..." />
             <img src={TextileImage2} alt="..." />
             <img src={TextileImage3} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Textiles' && subTitle==='RAJASTHAN GROUP' && <Carousel>
+            <img src={RajasthanTextileImage1} alt="..." />
+            <img src={RajasthanTextileImage2} alt="..." />
+            <img src={RajasthanTextileImage3} alt="..." />
+            <img src={RajasthanTextileImage4} alt="..." />
         </Carousel>
         }
         {title==='Agriculture' && <Carousel>
