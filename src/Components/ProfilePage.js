@@ -202,7 +202,7 @@ const ProfilePage = () => {
                 </div>
                 <div className='flex gap-8 mt-12 justify-between'>
                     <div className='profile4 border border-[#E6D8CC] p-6 w-96'>
-                        <img className='w-full' src={Leader4} alt="" />
+                        <img className='w-full h-auto lg:h-56' src={Leader4} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Ketan Somani</p>
                         <div className='mt-4'>
                             <div className='flex mb-2 gap-2'>
@@ -220,7 +220,7 @@ const ProfilePage = () => {
                         </div>
                     </div>
                     <div className='profile5 border border-[#E6D8CC] p-6 w-96'>
-                        <img className='w-full' src={Leader5} alt="" />
+                        <img className='w-full h-auto lg:h-56' src={Leader5} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Omkar Somani</p>
                         <div className='mt-4'>
                             <div className='flex mb-2 gap-2'>
@@ -234,7 +234,7 @@ const ProfilePage = () => {
                         </div>
                     </div>
                     <div className='profile6 border border-[#E6D8CC] p-6 w-96'>
-                        <img className='w-full' src={Leader6} alt="" />
+                    <img className='w-full h-auto lg:h-65' src={Leader6} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Pranav Somani</p>
                         <div className='mt-4'>
                             <div className='flex mb-2 gap-2'>
