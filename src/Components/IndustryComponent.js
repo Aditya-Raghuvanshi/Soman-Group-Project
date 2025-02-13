@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from './Navbar'
 //Header images imports -->
 import textileHeader from '../assets/images/TextileHeader.svg'
@@ -17,16 +17,21 @@ import Contact from './Contact'
 import { useLocation } from 'react-router-dom'
 import gsap from 'gsap'
 import Carousal from './Carousal'
+import Loader from './Loader'
 
 const IndustryComponent = () => {
     const headerPhoto = [RealEstateHeader,AutoMobileHeader,DistributionHeader,textileHeader,AgricultureHeader];
     const {state}=useLocation();
     const containerRef = useRef();
+    const [loading,setLoading]=useState(true);
     const data = state?.data;
 
     useEffect(()=>{
         window?.scrollTo({top:0,behavior:'smooth'});
         const container = containerRef.current;
+        setTimeout(()=>{
+            setLoading(false);
+        },4000)
         const handleIntersection = (entries, observer) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -89,11 +94,12 @@ const IndustryComponent = () => {
         return () => {
           if (container) {
             observer.unobserve(container);
+            setLoading(true);
           }
         };
     },[data])
     
-  return (
+  return loading?<Loader/>:(
     <div>
       <Navbar/>
       <img className='w-full' src={headerPhoto[data?.img]} alt="" />

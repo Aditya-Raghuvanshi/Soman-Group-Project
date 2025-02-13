@@ -98,8 +98,12 @@ const LegacyPage = () => {
         </div>
         <div ref={containerRef}>
         <div className='legacyDiv1 flex w-full'>
-            <div className='fourth text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>1967</div>
-            {/* <img className='w-1/2' src={sugarFarming} alt="" /> */}
+            <div className='w-[50%] relative'>
+                <div className='h-full w-full absolute gradient opacity-80'></div>
+                <div className='fourth text-white text-right font-zodiac text-5xl py-24 pr-8 font-extrabold'></div>
+                <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac right-6 text-white'>1967</div>
+            </div>
+            {/* <img className='w-1/2' src={sugarFarming} alt="" />*/}
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-24'>
                 <div className='my-auto'>
                     <p className='text-3xl text-white font-bold font-zodiac'>Textile Business</p>
@@ -117,10 +121,18 @@ const LegacyPage = () => {
                 </div>
             </div> 
             {/* <img className='w-1/2' src={RealEstate} alt="" /> */}
-            <div className='third text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'>2008</div>
+            <div className='w-[50%] relative'>
+                <div className='h-full w-full absolute gradient1 opacity-80'></div>
+                <div className='third text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'></div>
+                <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac left-6 text-[#0B6476]'>2008</div>
+            </div>
         </div>
         <div className='legacyDiv3 flex w-full'>
-            <div className='fifth text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2013</div>
+            <div className='w-[50%] relative'>
+                <div className='h-full w-full absolute gradient opacity-80'></div>
+                <div className='fifth text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'></div>
+                <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac right-6 text-white'>2013</div>
+            </div>
             {/* <img className='w-1/2' src={sugarFarming} alt="" /> */}
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-24'>
                 <div className='my-auto'>
@@ -139,10 +151,18 @@ const LegacyPage = () => {
                 </div>
             </div> 
             {/* <img className='w-1/2' src={RealEstate} alt="" /> */}
-            <div className='first text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'>2015</div>
+            <div className='w-[50%] relative'>
+                <div className='h-full w-full absolute gradient1 opacity-80'></div>
+                <div className='first text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'></div>
+                <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac left-6 text-[#0B6476]'>2015</div>
+            </div>
         </div>
         <div className='legacyDiv5 flex w-full'>
-        <div className='second text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'>2022</div>
+            <div className='w-[50%] relative'>
+                <div className='h-full w-full absolute gradient opacity-80'></div>
+                <div className='second text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'></div>
+                <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac right-6 text-white'>2022</div>
+            </div>
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-24'>
                 <div className='my-auto'>
                     <p className='text-3xl text-white font-bold font-zodiac'>Real Estate</p>

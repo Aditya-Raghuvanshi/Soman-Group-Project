@@ -8,20 +8,20 @@ const Loader = () => {
     useEffect(()=>{
       const intervalTime = 3000 / 100; 
       const interval = setInterval(() => {
-      setCount(prevCount => {
-        if (prevCount === 100) {
-          clearInterval(interval); // Stop the interval once it reaches 100
-          return prevCount;
-        }
-        return prevCount + 1;
-      });
-      gsap.to('.loader',2,{
-        top:"-100%",
-        ease: "power4.out",
-        delay: 4,
-      })
+        setCount(prevCount => {
+          if (prevCount === 100) {
+            clearInterval(interval); // Stop the interval once it reaches 100
+            return prevCount;
+          }
+          return prevCount + 1;
+        });
+        
     }, intervalTime);
-
+    gsap.to('.loader',{
+      top:"-100%",
+      ease: "power4.out",
+      delay: 4,
+    })
     // Cleanup the interval when the component unmounts
     return () => clearInterval(interval);
     },[])

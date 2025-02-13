@@ -147,7 +147,7 @@ const Navbar = () => {
                     </ul>
                   </div>
                 </div>
-                <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer py-4 px-5'><p>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1' /></button>
+                <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p className='my-auto'>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1 my-auto' /></button>
             </div>
         </div>
     </div>
