@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 // import sugarFarming from '../assets/images/SugaranceFarming.svg'
 import Navbar from './Navbar'
 import Contact from './Contact'
@@ -7,10 +7,15 @@ import arrow from '../assets/north-east-arrow.svg'
 import arrowBlue from '../assets/north-east-arrow-blue.svg'
 import './Legacy.css'
 import gsap from 'gsap'
+import Loader from './Loader'
 
 const LegacyPage = () => {
     const containerRef=useRef();
+    const [loading,setLoading]=useState(true);
     useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false);
+          },4200)
         gsap.fromTo('.legacy-text',
             {opacity:0,y:50},
             {
@@ -82,7 +87,7 @@ const LegacyPage = () => {
             }
           };
     },[])
-  return (
+  return loading?<Loader/> : (
     <>
         <Navbar/>
         <div className='flex justify-center py-16 bg-white px-8'>
@@ -122,7 +127,7 @@ const LegacyPage = () => {
             </div> 
             {/* <img className='w-1/2' src={RealEstate} alt="" /> */}
             <div className='w-[50%] relative'>
-                <div className='h-full w-full absolute gradient1 opacity-80'></div>
+                <div className='h-full w-full absolute gradient1 opacity-100'></div>
                 <div className='third text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'></div>
                 <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac left-6 text-[#0B6476]'>2008</div>
             </div>
@@ -152,7 +157,7 @@ const LegacyPage = () => {
             </div> 
             {/* <img className='w-1/2' src={RealEstate} alt="" /> */}
             <div className='w-[50%] relative'>
-                <div className='h-full w-full absolute gradient1 opacity-80'></div>
+                <div className='h-full w-full absolute gradient1 opacity-100'></div>
                 <div className='first text-[#0B6476] text-left font-zodiac text-5xl py-24 pl-8 font-bold'></div>
                 <div className='z-50 text-5xl absolute top-24 font-bold font-zodiac left-6 text-[#0B6476]'>2015</div>
             </div>

@@ -42,7 +42,21 @@ const DomainContainer = () => {
           description:'We started in 2008. Mainly focused on two wheeler supply in and around Satara district including 8 different talukas. We also act as main supplier to more than 20 sub dealers. Making us the dealership with high market share.',
           locations:['Baramati','Phaltan'],
           people:250,
-        }, 
+        },
+        {
+          id:3,
+          title:'CHETAK',
+          description:'After a longstanding partnership with Bajaj, the Somani Group was entrusted with the opportunity to establish Chetak EV dealerships across multiple locations. With EVs being the future of mobility, we are confident in expanding further to support the transition to sustainable transportation. Our dealerships offer a premium buying experience, combining expert guidance with robust after-sales support, reflecting our commitment to innovation and excellence.',
+          locations:['Baramati','Phaltan','Saswad','Uruli Kanchan','Chaufulla'],
+          people:250,
+        },
+        {
+          id:4,
+          title:'TATA Authorized Service Station (TASS)',
+          description:'The Somani Group’s journey with TATA began in 2013 as a trusted supplier of genuine parts to TASSs across the region. Building on this foundation, we launched two TATA Authorized Service Stations (TASSs) in 2024, strategically located in Wadki and Lonikand. Our state-of-the-art facility at Lonikand stands as a benchmark in the industry, reflecting our commitment to excellence. With advanced infrastructure and a customer-centric approach, we have earned multiple awards and recognition for our service quality, setting new standards for other service stations.',
+          locations:['Wadki','Lonikand'],
+          people:250,
+        }
       ]
     },
     {

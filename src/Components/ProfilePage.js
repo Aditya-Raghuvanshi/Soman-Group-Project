@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from './Navbar'
 import GroupImage from '../assets/images/GroupImage.jpg'
 import horizontalLine from '../assets/HorizontalLineProfile.svg'
@@ -13,11 +13,16 @@ import Contact from './Contact'
 import RealEstateStar from '../assets/images/ReaslEstateStar.svg'
 import AwardImage from '../assets/images/AwardImage.svg'
 import gsap from 'gsap'
+import Loader from './Loader'
 
 const ProfilePage = () => {
     const containerRef = useRef(null);
+    const [loading,setLoading] = useState(true);
     useEffect(()=>{
         const container = containerRef.current;
+        setTimeout(()=>{
+            setLoading(false);
+          },4200)
         gsap.fromTo('.profileMainDiv',
             {opacity:0,y:50},
             {
@@ -126,7 +131,7 @@ const ProfilePage = () => {
             }
         };
     },[])
-  return (
+  return loading?<Loader/>: (
     <div>
         <Navbar/>
         <img className='absolute h-[100vh] overflow-clip -z-50 top-6 w-full object-cover' src={GroupImage} alt="Group img" />

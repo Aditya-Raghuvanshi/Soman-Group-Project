@@ -52,6 +52,7 @@
     background-size: 100%;
     background-position: center;
     width:100%;
+    background-repeat: no-repeat;
 }
 
 .DomainBackground{

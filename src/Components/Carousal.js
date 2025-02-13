@@ -56,14 +56,14 @@ const Carousal = ({title,subTitle}) => {
         </Carousel>
         }
         {
-            title==='Automobile Dealerships' && subTitle!=='BAJAJ' && <Carousel>
+            title==='Automobile Dealerships' && subTitle!=='BAJAJ' && subTitle!=='CHETAK' &&<Carousel>
             <img src={AutomobileImage1} alt="..." />
             <img src={AutomobileImage2} alt="..." />
             <img src={AutomobileImage3} alt="..." />
         </Carousel>
         }
         {
-            title==='Automobile Dealerships' && subTitle==='BAJAJ' && <Carousel>
+            title==='Automobile Dealerships' && (subTitle==='BAJAJ' || subTitle==='CHETAK') && <Carousel>
             <img src={ChetakImage1} alt="..." />
             <img src={ChetakImage2} alt="..." />
             <img src={ChetakImage3} alt="..." />

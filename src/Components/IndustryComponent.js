@@ -27,11 +27,13 @@ const IndustryComponent = () => {
     const data = state?.data;
 
     useEffect(()=>{
+        setTimeout(()=>{
+          setLoading(false);
+      },4000)
+    },[])
+    useEffect(()=>{
         window?.scrollTo({top:0,behavior:'smooth'});
         const container = containerRef.current;
-        setTimeout(()=>{
-            setLoading(false);
-        },4000)
         const handleIntersection = (entries, observer) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
