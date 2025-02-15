@@ -96,7 +96,6 @@ const IndustryComponent = () => {
         return () => {
           if (container) {
             observer.unobserve(container);
-            setLoading(true);
           }
         };
     },[data])
@@ -107,24 +106,24 @@ const IndustryComponent = () => {
       <img className='w-full' src={headerPhoto[data?.img]} alt="" />
       <div className='flex justify-start w-full px-28 py-8'>
       </div>
-      <div ref={containerRef} className='px-28'>
+      <div ref={containerRef} className='px-4 md:px-28'>
         <div className='flex justify-between'>
             <div className='my-auto'>
-            <p className='text-2xl font-zodiac domainHead1'>Current Project in</p>
-            <p className='text-6xl font-semibold font-zodiac domainHead2'><i>{data?.title}</i></p>
+            <p className='text-base md:text-2xl font-zodiac domainHead1'>Current Project in</p>
+            <p className='text-4xl md:text-6xl font-semibold font-zodiac domainHead2'><i>{data?.title}</i></p>
             </div>
-            <img className='h-36 w-44 imageHome' src={somanGroupLogo} alt="Company logo" />
+            <img className='h-20 w-24 md:h-36 md:w-44 imageHome' src={somanGroupLogo} alt="Company logo" />
         </div>
         {
             data?.projects?.map((item,index)=>{
-                return <div className={`my-16 flex justify-between imageHome${index}`}>
+                return <div className={`my-16 flex flex-col md:flex-row justify-between imageHome${index}`}>
                     <div className='my-auto w-[80%]'>
                         <div className="flex mb-6">
                             <img className='w-16' src={horizontalLine} alt="" />
                             <p className='text-[#996830] text-sm ml-4'># {item?.id}</p>
                         </div>
                         <p className='text-3xl font-semibold font-zodiac'>{item?.title}</p>
-                        <p className='text-lg text-[#444444] w-[80%] mt-6 font-outfit'>{item?.description}</p>
+                        <p className='text-base md:text-lg text-[#444444] w-full md:w-[80%] mt-6 font-outfit'>{item?.description}</p>
 
                         <div className='flex flex-wrap gap-2 w-[80%] my-6'>
                             {
@@ -147,7 +146,7 @@ const IndustryComponent = () => {
                             </div> */}
                         </div>
                     </div>
-                    <div className='w-[65%] h-full my-auto'>
+                    <div className='w-full md:w-[65%] h-full my-auto'>
                     <Carousal title={data?.title} subTitle={item?.title}/>
                     </div>
                 </div>

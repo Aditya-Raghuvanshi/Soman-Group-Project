@@ -73,20 +73,20 @@ const MidContainer = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className='px-28 pt-32 pb-24'>
-      <div className='flex justify-between h-[560px]'>
+    <div ref={containerRef} className='px-4 md:px-28 pt-20 md:pt-32 pb-24'>
+      <div className='flex flex-col md:flex-row justify-between'>
         <div className='flex flex-col my-auto'>
           <div className='flex'>
             <img className='w-16' src={horizontalLine} alt="" />
             <p className='text-sm text-[#996830] ml-4'>ABOUT US</p>
           </div>
-          <p className='about-text text-7xl my-6 font-zodiac'>Since 1968</p>
-          <p className='about-text1 text-[#444444] text-base w-[80%] font-outfit'>
+          <p className='about-text text-3xl md:text-7xl my-6 font-zodiac font-semibold'>Since 1968</p>
+          <p className='about-text1 text-[#444444] text-sm md:text-base mb-4 md:mb-auto w-full md:w-[80%] font-outfit'>
             Founded by the a founder late Mr. Motilal Somani and his late son Mr. Champalal Motilal Somani, the Somani Group is one of the most respected and renowned business houses of Baramati & Maharashtra
           </p>
         </div>
-        <img className='image1 mb-20' src={image1} alt="" />
-        <img className='image2 mt-20 ml-4' src={image2} alt="" />
+        <img className='image1 h-80 md:h-auto md:mb-20' src={image1} alt="" />
+        <img className='image2 h-80 md:h-auto mt-4 md:mt-20 md:ml-4' src={image2} alt="" />
       </div>
     </div>
   )

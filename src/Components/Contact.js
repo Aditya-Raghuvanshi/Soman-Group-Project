@@ -20,19 +20,19 @@ const Contact = () => {
     }
   return (
     <div>
-        <div className='flex justify-between mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
-            <p className='text-5xl w-[50%] font-zodiac'>Reach out to us!</p>
-            <div className='w-[50%]'>
-                <p className='text-[#D6C3AC] text-xl'>Full name</p>
+        <div className='flex flex-col md:flex-row justify-between mx-4 md:mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
+            <p className='text-3xl md:text-5xl w-full md:w-[50%] font-zodiac'>Reach out to us!</p>
+            <div className='w-full md:w-[50%] mt-4 md:mt-auto'>
+                <p className='text-[#D6C3AC] text-lg md:text-xl'>Full name</p>
                 <input className='border-t-0 border-x-0 border-[#D6C3AC] w-full mb-6 py-2 focus:outline-none focus:ring-0 focus:border-b focus:border-[#D6C3AC]' onChange={(e)=>{setName(e.target.value)}} type="text" />
-                <p className='text-[#D6C3AC] text-xl'>Email</p>
+                <p className='text-[#D6C3AC] text-lg md:text-xl'>Email</p>
                 <input className='border-t-0 border-x-0 border-[#D6C3AC] w-full py-2 focus:outline-none focus:ring-0 focus:border-b focus:border-[#D6C3AC]' onChange={(e)=>{setEmail(e.target.value)}} type="text" />
                 <button className='text-white text-xs bg-[#0B6476] font-semibold mt-8 w-[120px] h-10' onClick={handleSubmit}>
                     SUBMIT
                 </button>
             </div>
         </div>
-        <div className='flex justify-between gap-4 mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
+        <div className='flex flex-col md:flex-row justify-between gap-4 mx-4 md:mx-28 py-20 border-t border-dashed border-[#D6C3AC]'>
             <div>
                 <p className='text-sm text-[#2C2C2C]'>Follow us on</p>
                 <div className='flex flex-wrap gap-4 mt-2'>

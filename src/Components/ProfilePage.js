@@ -134,27 +134,27 @@ const ProfilePage = () => {
   return loading?<Loader/>: (
     <div>
         <Navbar/>
-        <img className='absolute h-[100vh] overflow-clip -z-50 top-6 w-full object-cover' src={GroupImage} alt="Group img" />
-        <div className='profileMainDiv flex justify-between bg-[#0B6476] mx-28 mt-[478px] p-14'>
-            <p className='text-5xl text-white font-zodiac mr-16'>Our Profile</p>
+        <img className='absolute h-[40vh] md:h-[100vh] overflow-clip -z-50 top-6 w-full object-cover' src={GroupImage} alt="Group img" />
+        <div className='profileMainDiv flex flex-col md:flex-row justify-between bg-[#0B6476] mx-4 md:mx-28 mt-[200px] md:mt-[478px] p-14'>
+            <p className='text-2xl md:text-5xl text-white font-zodiac mr-16'>Our Profile</p>
             <div>
-                <div className="flex">
+                <div className="flex mt-4 md:mt-auto">
                     <img className='w-16' src={horizontalLine} alt="hprozontal line" />
                     <p className='text-[#FFC889] text-sm ml-4 font-outfit'>Our Vision</p>
                 </div>
-                <p className='text-white font-outfit mt-4 text-xl'>To drive transparent and open busi- ness practices in order to translate our honest and authentic beliefs about business and responsibility into anything we venture into.</p>
+                <p className='text-white font-outfit mt-4 text-sm md:text-xl'>To drive transparent and open busi- ness practices in order to translate our honest and authentic beliefs about business and responsibility into anything we venture into.</p>
                 <div className="flex mt-10">
                     <img className='w-16' src={horizontalLine} alt="hprozontal line" />
                     <p className='text-[#FFC889] text-sm ml-4 font-outfit'>Our Mission</p>
                 </div>
-                <p className='text-white font-outfit mt-4 text-xl'>To drive transparent and open busi- ness practices in order to translate our honest and authentic beliefs about business and responsibility into anything we venture into.</p>
+                <p className='text-white font-outfit mt-4 text-sm md:text-xl'>To drive transparent and open busi- ness practices in order to translate our honest and authentic beliefs about business and responsibility into anything we venture into.</p>
             </div>
         </div>
-        <div className='p-20'>
+        <div className='px-4 pt-6 md:px-20 md:pt-20 md:pb-20'>
             <div ref={containerRef}>
                 <p className='leaderHead text-3xl font-bold mb-12 font-zodiac'>The leaders behind our success...</p>
-                <div className='flex gap-8 justify-between'>
-                    <div className='profile1 border border-[#E6D8CC] p-6 w-96'>
+                <div className='flex flex-col md:flex-row gap-8 justify-between'>
+                    <div className='profile1 border border-[#E6D8CC] p-6 w-full md:w-96'>
                         <img className='w-full' src={Leader1} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Sushil Somani</p>
                         <div className='mt-4'>
@@ -172,7 +172,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='profile2 border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile2 border border-[#E6D8CC] p-6 w-full md:w-96'>
                         <img className='w-full' src={Leader2} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Subhash Somani</p>
                         <div className='mt-4'>
@@ -190,7 +190,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='profile3 border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile3 border border-[#E6D8CC] p-6 w-full md:w-96'>
                         <img className='w-full' src={Leader3} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Mahesh Somani</p>
                         <div className='mt-4'>
@@ -205,8 +205,8 @@ const ProfilePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-8 mt-12 justify-between'>
-                    <div className='profile4 border border-[#E6D8CC] p-6 w-96'>
+                <div className='flex flex-col md:flex-row gap-8 mt-12 justify-between'>
+                    <div className='profile4 border border-[#E6D8CC] p-6 w-full md:w-96'>
                         <img className='w-full h-auto lg:h-56' src={Leader4} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Ketan Somani</p>
                         <div className='mt-4'>
@@ -224,7 +224,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='profile5 border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile5 border border-[#E6D8CC] p-6 w-full md:w-96'>
                         <img className='w-full h-auto lg:h-56' src={Leader5} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Omkar Somani</p>
                         <div className='mt-4'>
@@ -238,7 +238,7 @@ const ProfilePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='profile6 border border-[#E6D8CC] p-6 w-96'>
+                    <div className='profile6 border border-[#E6D8CC] p-6 w-full md:w-96'>
                     <img className='w-full h-auto lg:h-65' src={Leader6} alt="" />
                         <p className='font-zodiac text-2xl font-semibold mt-6'>Pranav Somani</p>
                         <div className='mt-4'>

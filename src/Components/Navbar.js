@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CompanyLogo from '../assets/company.svg'
 import northEastArrow from '../assets/north-east-arrow.svg'
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const navigate=useNavigate();
+  const [toggleClicked,setToggleClicked] = useState(false);
   const array = [
     {
       img:0,
@@ -136,16 +137,51 @@ const Navbar = () => {
     window?.scrollTo({top: document.body.scrollHeight,behavior:'smooth'});
   }
   return (
-    <div className='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10'>
-        <div className='flex justify-between'>
+    <>
+    {
+      <img onClick={()=>setToggleClicked(!toggleClicked)} className='h-10 w-10 ml-auto mr-2 mt-2 md:hidden block' src="https://cdn-icons-png.flaticon.com/512/3388/3388823.png" alt="" />
+    }
+    {
+      <div className='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10 hidden md:block'>
+      <div className='flex md:flex-row flex-col justify-between'>
+          <div className='flex flex-col'>
+              <img className='cursor-pointer h-10 md:h-auto' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
+          </div>
+          <div className='flex md:flex-row flex-col'>
+              <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'onClick={()=>navigate('/legacy')}>Legacy</button>
+              <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]' onClick={()=>navigate('/profile')}>Profile</button>
+              {/* <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>Products</button> */}
+              <div className='relative group my-auto mx-auto'>
+                <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>
+                  Products
+                </button>
+                
+                {/* Dropdown Options */}
+                <div className='absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-40 z-10'>
+                  <ul className='py-2'>
+                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Real Estate</li>
+                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Automobile</li>
+                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Distribution</li>
+                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Textile</li>
+                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(4)}>Farming</li>
+                  </ul>
+                </div>
+              </div>
+              <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p className='my-auto mx-auto'>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1 my-auto' /></button>
+          </div>  
+      </div>
+  </div>
+    }
+    {toggleClicked && <div className='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10'>
+        <div className='flex md:flex-row flex-col justify-between'>
             <div className='flex flex-col'>
-                <img className='cursor-pointer' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
+                <img className='cursor-pointer h-10 md:h-auto' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
             </div>
-            <div className='flex'>
+            <div className='flex md:flex-row flex-col'>
                 <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'onClick={()=>navigate('/legacy')}>Legacy</button>
                 <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]' onClick={()=>navigate('/profile')}>Profile</button>
                 {/* <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>Products</button> */}
-                <div className='relative group my-auto'>
+                <div className='relative group my-auto mx-auto'>
                   <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>
                     Products
                   </button>
@@ -161,10 +197,11 @@ const Navbar = () => {
                     </ul>
                   </div>
                 </div>
-                <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p className='my-auto'>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1 my-auto' /></button>
-            </div>
+                <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p className='my-auto mx-auto'>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1 my-auto' /></button>
+            </div>  
         </div>
-    </div>
+    </div>}
+    </>
   )
 }
 
