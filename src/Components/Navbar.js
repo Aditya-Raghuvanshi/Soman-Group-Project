@@ -282,7 +282,7 @@ const Navbar = () => {
               {isDropdownOpen && (
                 <div className="z-10 absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
-                    <li>
+                    <li className='cursor-pointer'>
                       <p
                         onClick={()=>handleNavigateClick(0)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -290,7 +290,7 @@ const Navbar = () => {
                         Real Estate
                       </p>
                     </li>
-                    <li>
+                    <li className='cursor-pointer'>
                       <p
                         onClick={()=>handleNavigateClick(1)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -298,7 +298,7 @@ const Navbar = () => {
                         Automobile
                       </p>
                     </li>
-                    <li>
+                    <li className='cursor-pointer'>
                       <p
                         onClick={()=>handleNavigateClick(2)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -306,7 +306,7 @@ const Navbar = () => {
                         Distribution
                       </p>
                     </li>
-                    <li>
+                    <li className='cursor-pointer'>
                       <p
                         onClick={()=>handleNavigateClick(3)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -314,7 +314,7 @@ const Navbar = () => {
                         Textile
                       </p>
                     </li>
-                    <li>
+                    <li className='cursor-pointer'>
                       <p
                         onClick={()=>handleNavigateClick(4)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -326,7 +326,7 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className='py-2 px-3'>
+            <li className='py-2 px-3 cursor-pointer'>
               <p
                 onClick={()=>navigate('/legacy')}
                 className="block  text-gray-900 text-sm rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -334,7 +334,7 @@ const Navbar = () => {
                 Legacy
               </p>
             </li>
-            <li className='pt-2 pb-3 md:pt-2 md:pb-2 px-3'>
+            <li className='pt-2 pb-3 md:pt-2 md:pb-2 px-3 cursor-pointer'>
               <p
                 onClick={()=>navigate('/profile')}
                 className="block  text-sm text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -342,7 +342,7 @@ const Navbar = () => {
                 Profile
               </p>
             </li>
-            <li className='md:pt-auto'>
+            <li className='md:pt-auto cursor-pointer'>
               <p
                 onClick={handleClick}
                 className="flex py-2 px-3 md:px-5 md:py-2 bg-[#0B6476] text-white text-sm rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
