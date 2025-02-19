@@ -6,6 +6,18 @@ import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const navigate=useNavigate();
   const [toggleClicked,setToggleClicked] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Toggle dropdown visibility
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   const array = [
     {
       img:0,
@@ -137,71 +149,211 @@ const Navbar = () => {
     window?.scrollTo({top: document.body.scrollHeight,behavior:'smooth'});
   }
   return (
-    <>
-    {
-      <img onClick={()=>setToggleClicked(!toggleClicked)} className='h-10 w-10 ml-auto mr-2 mt-2 md:hidden block' src="https://cdn-icons-png.flaticon.com/512/3388/3388823.png" alt="" />
-    }
-    {
-      <div className='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10 hidden md:block'>
-      <div className='flex md:flex-row flex-col justify-between'>
-          <div className='flex flex-col'>
-              <img className='cursor-pointer h-10 md:h-auto' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
-          </div>
-          <div className='flex md:flex-row flex-col'>
-              <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'onClick={()=>navigate('/legacy')}>Legacy</button>
-              <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]' onClick={()=>navigate('/profile')}>Profile</button>
-              {/* <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>Products</button> */}
-              <div className='relative group my-auto mx-auto'>
-                <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>
-                  Products
-                </button>
+  //   <>
+  //   {
+  //     <img onClick={()=>setToggleClicked(!toggleClicked)} classNameName='h-10 w-10 ml-auto mr-2 mt-2 md:hidden block' src="https://cdn-icons-png.flaticon.com/512/3388/3388823.png" alt="" />
+  //   }
+  //   {
+  //     <div classNameName='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10 hidden md:block'>
+  //     <div classNameName='flex md:flex-row flex-col justify-between'>
+  //         <div classNameName='flex flex-col'>
+  //             <img classNameName='cursor-pointer h-10 md:h-auto' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
+  //         </div>
+  //         <div classNameName='flex md:flex-row flex-col'>
+  //             <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'onClick={()=>navigate('/legacy')}>Legacy</button>
+  //             <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]' onClick={()=>navigate('/profile')}>Profile</button>
+  //             {/* <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>Products</button> */}
+  //             <div classNameName='relative group my-auto mx-auto'>
+  //               <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>
+  //                 Products
+  //               </button>
                 
-                {/* Dropdown Options */}
-                <div className='absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-40 z-10'>
-                  <ul className='py-2'>
-                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Real Estate</li>
-                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Automobile</li>
-                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Distribution</li>
-                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Textile</li>
-                    <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(4)}>Farming</li>
+  //               {/* Dropdown Options */}
+  //               <div classNameName='absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-40 z-10'>
+  //                 <ul classNameName='py-2'>
+  //                   <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Real Estate</li>
+  //                   <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Automobile</li>
+  //                   <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Distribution</li>
+  //                   <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Textile</li>
+  //                   <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(4)}>Farming</li>
+  //                 </ul>
+  //               </div>
+  //             </div>
+  //             <button onClick={handleClick} classNameName='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p classNameName='my-auto mx-auto'>CONTACT US </p><img src={northEastArrow} alt="" classNameName='pl-1 my-auto' /></button>
+  //         </div>  
+  //     </div>
+  // </div>
+  //   }
+  //   {toggleClicked && <div classNameName='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10'>
+  //       <div classNameName='flex md:flex-row flex-col justify-between'>
+  //           <div classNameName='flex flex-col'>
+  //               <img classNameName='cursor-pointer h-10 md:h-auto' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
+  //           </div>
+  //           <div classNameName='flex md:flex-row flex-col'>
+  //               <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'onClick={()=>navigate('/legacy')}>Legacy</button>
+  //               <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]' onClick={()=>navigate('/profile')}>Profile</button>
+  //               {/* <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>Products</button> */}
+  //               <div classNameName='relative group my-auto mx-auto'>
+  //                 <button classNameName='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>
+  //                   Products
+  //                 </button>
+                  
+  //                 {/* Dropdown Options */}
+  //                 <div classNameName='absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-40 z-10'>
+  //                   <ul classNameName='py-2'>
+  //                     <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Real Estate</li>
+  //                     <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Automobile</li>
+  //                     <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Distribution</li>
+  //                     <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Textile</li>
+  //                     <li classNameName='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(4)}>Farming</li>
+  //                   </ul>
+  //                 </div>
+  //               </div>
+  //               <button onClick={handleClick} classNameName='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p classNameName='my-auto mx-auto'>CONTACT US </p><img src={northEastArrow} alt="" classNameName='pl-1 my-auto' /></button>
+  //           </div>  
+  //       </div>
+  //   </div>}
+  //   </>
+  
+
+<nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a onClick={()=>navigate('/')} className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={CompanyLogo} className="h-8 md:h-10" alt="Flowbite Logo" />
+        </a>
+        <button
+          onClick={toggleMobileMenu}
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded={isMobileMenuOpen ? "true" : "false"}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+
+        {/* Mobile menu */}
+        <div
+          className={`${
+            isMobileMenuOpen ? "block" : "hidden"
+          } w-full md:block md:w-auto`}
+          id="navbar-dropdown"
+        >
+          <ul className="flex flex-col font-medium font-zodiac p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li className='py-2 md:py-2 px-3'>
+              <button
+                onClick={toggleDropdown}
+                id="dropdownNavbarLink"
+                className="flex items-center justify-between w-full text-gray-900 text-sm rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Products{" "}
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              {/* Dropdown menu */}
+              {isDropdownOpen && (
+                <div className="z-10 absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
+                    <li>
+                      <a
+                        onClick={()=>handleNavigateClick(0)}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Real Estate
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        onClick={()=>handleNavigateClick(1)}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Automobile
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        onClick={()=>handleNavigateClick(2)}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Distribution
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        onClick={()=>handleNavigateClick(3)}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Textile
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        onClick={()=>handleNavigateClick(4)}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Farming
+                      </a>
+                    </li>
                   </ul>
                 </div>
-              </div>
-              <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p className='my-auto mx-auto'>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1 my-auto' /></button>
-          </div>  
-      </div>
-  </div>
-    }
-    {toggleClicked && <div className='sticky top-0 px-20 py-3 border-2 border-d border-[#F2F4F7] bg-white z-10'>
-        <div className='flex md:flex-row flex-col justify-between'>
-            <div className='flex flex-col'>
-                <img className='cursor-pointer h-10 md:h-auto' onClick={()=>navigate('/')} src={CompanyLogo} alt="" />
-            </div>
-            <div className='flex md:flex-row flex-col'>
-                <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'onClick={()=>navigate('/legacy')}>Legacy</button>
-                <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]' onClick={()=>navigate('/profile')}>Profile</button>
-                {/* <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>Products</button> */}
-                <div className='relative group my-auto mx-auto'>
-                  <button className='text-sm text-[#667085] mr-8 cursor-pointer hover:text-[#0B6476]'>
-                    Products
-                  </button>
-                  
-                  {/* Dropdown Options */}
-                  <div className='absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-40 z-10'>
-                    <ul className='py-2'>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(0)}>Real Estate</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(1)}>Automobile</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(2)}>Distribution</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(3)}>Textile</li>
-                      <li className='px-4 py-2 text-sm text-[#667085] hover:bg-[#F2F4F7] cursor-pointer' onClick={()=>handleNavigateClick(4)}>Farming</li>
-                    </ul>
-                  </div>
-                </div>
-                <button onClick={handleClick} className='flex text-sm text-white bg-[#0B6476] cursor-pointer text-center px-5'><p className='my-auto mx-auto'>CONTACT US </p><img src={northEastArrow} alt="" className='pl-1 my-auto' /></button>
-            </div>  
+              )}
+            </li>
+            <li className='py-2 px-3'>
+              <a
+                onClick={()=>navigate('/legacy')}
+                className="block  text-gray-900 text-sm rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Legacy
+              </a>
+            </li>
+            <li className='pt-2 pb-3 md:pt-2 md:pb-2 px-3'>
+              <a
+                onClick={()=>navigate('/profile')}
+                className="block  text-sm text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Profile
+              </a>
+            </li>
+            <li className='md:pt-auto'>
+              <a
+                onClick={handleClick}
+                className="flex py-2 px-3 md:px-5 md:py-2 bg-[#0B6476] text-white text-sm rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                <p classNameName='my-auto mx-auto text-sm'>CONTACT US </p><img src={northEastArrow} alt="" classNameName='pl-2 my-auto' />
+              </a>
+            </li>
+          </ul>
         </div>
-    </div>}
-    </>
+      </div>
+    </nav>
+
   )
 }
 
