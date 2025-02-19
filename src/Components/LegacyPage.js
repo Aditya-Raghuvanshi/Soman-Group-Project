@@ -90,7 +90,7 @@ const LegacyPage = () => {
   return loading?<Loader/> : (
     <>
         <Navbar/>
-        <div className='flex justify-center py-16 bg-white px-8'>
+        <div className='flex justify-center py-16 bg-white px-8 Hero'>
             <div>
             {/* Apply the class hero-text and use the splitText function */}
             <p className='legacy-text text-6xl font-semibold font-zodiac'>
