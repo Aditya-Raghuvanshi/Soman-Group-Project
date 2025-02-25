@@ -164,11 +164,11 @@ const ProfilePage = () => {
                             </div>
                             <div className='flex mb-2 gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />  
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>Mr. Sushil, born in 1963 is mainly responsible for the investment part of the group along with handling two wheeler dealerships of Bajaj</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>A financial strategist and investment expert, Mr. Sushil Somani plays a pivotal role in managing the group's financial portfolio and investment ventures. With a keen eye for numbers, he oversees the accounting and taxation aspects, ensuring the group’s fiscal health.</p>
                             </div>
                             <div className='flex gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>His calculative nature makes him an extraordinary personnel in the accounting and taxation part of the group</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>His leadership extends to the automobile sector, where he has been instrumental in managing two-wheeler dealerships of Bajaj.</p>
                             </div>
                         </div>
                     </div>
@@ -182,11 +182,11 @@ const ProfilePage = () => {
                             </div>
                             <div className='flex mb-2 gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />  
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>Mr.Subhash, born in 1963, has a philosophy- ‘Change is Inevitable’</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>A visionary leader, Mr. Subhash Somani believes in the philosophy that "Change is Inevitable." His relentless efforts towards diversification have made him a pillar of the group’s HR activities and operational expansions.</p>
                             </div>
                             <div className='flex gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>Constantly working towards diversification has made him the pillar of HR activities of the group along with the management of the distributorships of Somani group</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>He plays a key role in the management of the distributorship vertical, ensuring seamless operations and sustainable growth.</p>
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ const ProfilePage = () => {
                             </div>
                             <div className='flex gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />  
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>Mr.Subhash, born in 1963, the visionary behind automation and technology now looks after the retail section of the Somani group of companies</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>A technology-driven strategist, Mr. Mahesh Somani spearheads the automation and retail operations of the Somani Group. With a forward-thinking approach, he has played a crucial role in integrating modern technological advancements to enhance efficiency and customer experience across the retail division.</p>
                             </div>
                         </div>
                     </div>
@@ -216,11 +216,11 @@ const ProfilePage = () => {
                             </div>
                             <div className='flex mb-2 gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />  
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>Youngest of all, Mr.Ketan provides the different perspective towards the working of the group.</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>The youngest of the senior leadership team, Mr. Ketan Somani brings fresh perspectives and dynamic decision-making to the group's operations.</p>
                             </div>
                             <div className='flex gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>He provides valuable support towards banking decisions carrying along with the responsibility of Hyundai dealership.</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>He plays an essential role in financial planning and banking strategies, while also managing the Hyundai dealership, ensuring seamless business execution and customer satisfaction.</p>
                             </div>
                         </div>
                     </div>
@@ -234,7 +234,7 @@ const ProfilePage = () => {
                             </div>
                             <div className='flex gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />  
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>being the youngest of family takes care of distribution network of TATA and Hyundai MOBIS</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>As a new-generation leader, Mr. Omkar Somani manages the distribution networks of TATA and Hyundai MOBIS, bringing innovative and efficient strategies to the business. His expertise in supply chain management and operations ensures the seamless functioning of these verticals, contributing to the group’s expansion in the automotive sector.</p>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@ const ProfilePage = () => {
                             </div>
                             <div className='flex gap-2'>
                                 <img className='h-5 w-4' src={starLogo} alt="" />  
-                                <p className='text-sm mx-1 font-outfit text-[#444444]'>started REAL estate by himself in last 3 years handles realestate by himself in Baramati and</p>
+                                <p className='text-sm mx-1 font-outfit text-[#444444]'>A real estate entrepreneur with a sharp business acumen, Mr. Pranav Somani has independently built the group's real estate vertical over the last three years. Managing large-scale projects in Baramati and Pune, he is focused on creating innovative and sustainable developments that align with the evolving needs of the market.</p>
                             </div>
                         </div>
                     </div>

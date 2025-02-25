@@ -12,7 +12,7 @@ import location from '../assets/location.svg'
 // import people from '../assets/people.svg'
 // import area from '../assets/area.svg'
 import horizontalLine from '../assets/horizontal-line.svg'
-import somanGroupLogo from '../assets/soman-group-logo.svg'
+// import somanGroupLogo from '../assets/soman-group-logo.svg'
 import Contact from './Contact'
 import { useLocation } from 'react-router-dom'
 import gsap from 'gsap'
@@ -112,7 +112,7 @@ const IndustryComponent = () => {
             <p className='text-base md:text-2xl font-zodiac domainHead1'>Current Project in</p>
             <p className='text-4xl md:text-6xl font-semibold font-zodiac domainHead2'><i>{data?.title}</i></p>
             </div>
-            <img className='h-20 w-24 md:h-36 md:w-44 imageHome' src={somanGroupLogo} alt="Company logo" />
+            {/* <img className='h-20 w-24 md:h-36 md:w-44 imageHome' src={somanGroupLogo} alt="Company logo" /> */}
         </div>
         {
             data?.projects?.map((item,index)=>{

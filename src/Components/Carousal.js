@@ -26,6 +26,13 @@ import RajasthanTextileImage1 from '../assets/images/RajasthanTextileImage1.jpg'
 import RajasthanTextileImage2 from '../assets/images/RajasthanTextileImage2.jpg'
 import RajasthanTextileImage3 from '../assets/images/RajasthanTextileImage3.jpg'
 import RajasthanTextileImage4 from '../assets/images/RajasthanTextileImage4.jpg'
+import BajajImage1 from '../assets/images/BajajImage1.jpg'
+import BajajImage2 from '../assets/images/BajajImage2.jpg'
+import MobisImage1 from '../assets/images/MobisImage1.jpg'
+import MobisImage2 from '../assets/images/MobisImage2.jpg'
+import MobisImage3 from '../assets/images/MobisImage3.jpg'
+import EicherImage1 from '../assets/images/EicherImage1.jpg'
+import EicherImage2 from '../assets/images/EicherImage2.jpg'
 import { Carousel } from 'flowbite-react'
 // import { Carousel } from "flowbite-react";
 
@@ -45,14 +52,35 @@ const Carousal = ({title,subTitle}) => {
         </Carousel>
         }
         {
-            title==='Distributorship' && <Carousel>
-            <img src={DistributionImage1} alt="..." />
+            title==='Distributorship' && subTitle==='TATA CVBU Distributor'&& <Carousel>
             <img src={DistributionImage1} alt="..." />
             <img src={DistributionImage2} alt="..." />
+            <img src={DistributionImage5} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Distributorship' && subTitle==='TATA VOR (Vehicle off road)'&& <Carousel>
+            <img src={DistributionImage2} alt="..." />
+            <img src={DistributionImage6} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Distributorship' && subTitle==='TATA retail spare Distributor'&& <Carousel>
             <img src={DistributionImage3} alt="..." />
             <img src={DistributionImage4} alt="..." />
-            <img src={DistributionImage5} alt="..." />
-            <img src={DistributionImage6} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Distributorship' && subTitle==='HYUNDAI MOBIS Distributor'&& <Carousel>
+            <img src={MobisImage1} alt="..." />
+            <img src={MobisImage2} alt="..." />
+            <img src={MobisImage3} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Distributorship' && subTitle==='EICHER TRACTOR Distributor'&& <Carousel>
+            <img src={EicherImage1} alt="..." />
+            <img src={EicherImage2} alt="..." />
         </Carousel>
         }
         {
@@ -63,11 +91,17 @@ const Carousal = ({title,subTitle}) => {
         </Carousel>
         }
         {
-            title==='Automobile Dealerships' && (subTitle==='BAJAJ' || subTitle==='CHETAK') && <Carousel>
+            title==='Automobile Dealerships' && (subTitle==='CHETAK') && <Carousel>
             <img src={ChetakImage1} alt="..." />
             <img src={ChetakImage2} alt="..." />
             <img src={ChetakImage3} alt="..." />
             <img src={ChetakImage4} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Automobile Dealerships' && (subTitle==='BAJAJ') && <Carousel>
+            <img src={BajajImage1} alt="..." />
+            <img src={BajajImage2} alt="..." />
         </Carousel>
         }
         {

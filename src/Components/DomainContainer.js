@@ -213,12 +213,12 @@ const DomainContainer = () => {
       </div>
       <div className='w-full'>
         <div className="flex flex-col md:flex-row w-full justify-between gap-8">
-            <div className='image3 p-10 border w-full border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
+            <div className='image3 p-10 border w-full md:w-[50%] border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
                 <img className='mb-14' src={realEstate} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Real Estate</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
             </div>
-            <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
+            <div className='image3 p-10 w-full md:w-[50%] border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
                 <img className='mb-14' src={automobile} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Automobile</p>
                 <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
