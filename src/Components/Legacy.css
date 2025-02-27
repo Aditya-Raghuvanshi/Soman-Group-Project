@@ -40,7 +40,7 @@
 }
 
 .fifth{
-    background-image: url('../assets/images/DistributionLegacy.svg');
+    background-image: url('../assets/images/DistributionLegacy1.jpg');
     background-size: cover;
     background-position: center;
     width:100%;
@@ -53,6 +53,24 @@
     background-position: center;
     width:100%;
     background-repeat: no-repeat;
+}
+
+.LegacyHero{
+    background-image: url('../assets/legacy_hero_img.svg');
+    background-position:right;
+    background-size: 40%;
+    width:100%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:600px){
+    .LegacyHero{
+        background-image: url('../assets/legacy_hero_img.svg');
+        background-position:right bottom;
+        background-size: 60%;
+        width:100%;
+        background-repeat: no-repeat;
+    }
 }
 
 .DomainBackground{

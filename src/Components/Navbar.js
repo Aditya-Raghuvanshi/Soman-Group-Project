@@ -113,7 +113,7 @@ const Navbar = () => {
           id:1,
           title:'RAJASTHAN GROUP',
           description:'The first venture of somani group of companies which started 60 years ago down the line. Started on the occasion of padwa by the founder of the Somani group, late Mr. Champalal Motilal Somani. It is a complete family cloth store which comprises clothes right from a born baby to a person in the 90s.',
-          locations:['RAJASTHAN SS','RAJASTHAN SADI','THE WODROBE','RAJASTHAN LADY SHOPEE'],
+          locations:['RAJASTHAN SS','RAJASTHAN SADI','THE WARDROBE','RAJASTHAN LADY SHOPEE'],
           people:250,
           area:'80,000 sq.ft',
         },
@@ -255,7 +255,7 @@ const Navbar = () => {
           id="navbar-dropdown"
         >
           <ul className="flex flex-col font-medium font-zodiac p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li className='py-2 px-3 cursor-pointer'>
+          <li className='py-2 cursor-pointer'>
               <p
                 onClick={()=>navigate('/')}
                 className="block  text-gray-900 text-sm rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -263,7 +263,7 @@ const Navbar = () => {
                 Home
               </p>
             </li>
-            <li className='py-2 md:py-2 px-3'>
+            <li className='py-2 md:py-2'>
               <button
                 onClick={toggleDropdown}
                 id="dropdownNavbarLink"
@@ -334,7 +334,7 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className='py-2 px-3 cursor-pointer'>
+            <li className='py-2 cursor-pointer'>
               <p
                 onClick={()=>navigate('/legacy')}
                 className="block  text-gray-900 text-sm rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -342,7 +342,7 @@ const Navbar = () => {
                 Legacy
               </p>
             </li>
-            <li className='pt-2 pb-3 md:pt-2 md:pb-2 px-3 cursor-pointer'>
+            <li className='pt-2 pb-3 md:pt-2 md:pb-2 cursor-pointer'>
               <p
                 onClick={()=>navigate('/profile')}
                 className="block  text-sm text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -353,7 +353,7 @@ const Navbar = () => {
             <li className='md:pt-auto cursor-pointer'>
               <p
                 onClick={handleClick}
-                className="flex py-2 px-3 md:px-5 md:py-2 bg-[#0B6476] text-white text-sm rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="flex py-2 px-3 md:px-5 md:py-2 bg-[#0B6476] text-white text-sm rounded-sm md:border-0 md:p-0 dark:text-white"
               >
                 <p classNameName='my-auto mx-auto text-sm'>CONTACT US </p><img src={northEastArrow} alt="" classNameName='pl-2 my-auto' />
               </p>

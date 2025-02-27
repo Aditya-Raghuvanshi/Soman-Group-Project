@@ -107,7 +107,7 @@ const DomainContainer = () => {
           id:1,
           title:'RAJASTHAN GROUP',
           description:'The first venture of somani group of companies which started 60 years ago down the line. Started on the occasion of padwa by the founder of the Somani group, late Mr. Champalal Motilal Somani. It is a complete family cloth store which comprises clothes right from a born baby to a person in the 90s.',
-          locations:['RAJASTHAN SS','RAJASTHAN SADI','THE WODROBE','RAJASTHAN LADY SHOPEE'],
+          locations:['RAJASTHAN SS','RAJASTHAN SADI','THE WARDROBE','RAJASTHAN LADY SHOPEE'],
           people:250,
           area:'80,000 sq.ft',
         },

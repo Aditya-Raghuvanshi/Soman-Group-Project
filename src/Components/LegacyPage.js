@@ -90,13 +90,13 @@ const LegacyPage = () => {
   return loading?<Loader/> : (
     <>
         <Navbar/>
-        <div className='flex justify-center py-16 bg-white px-8 Hero'>
+        <div className='flex justify-center py-16 bg-white px-8 LegacyHero'>
             <div>
             {/* Apply the class hero-text and use the splitText function */}
             <p className='legacy-text text-6xl font-semibold font-zodiac'>
                 Our legacy
             </p>
-            <p className='legacy-description-text w-1/2 text-[#444444] mt-4 font-outfit'>
+            <p className='legacy-description-text w-3/4 md:w-1/2 text-[#444444] mt-4 font-outfit'>
                 We at <b>Somani Group</b> drive transparent and open business practices to translate our honest and authentic beliefs about responsibility into anything we venture into.
             </p>
             </div>
@@ -166,7 +166,7 @@ const LegacyPage = () => {
             <div className='w-[50%] relative'>
                 <div className='h-full w-full absolute gradient opacity-80'></div>
                 <div className='second text-white text-right font-zodiac text-5xl py-24 pr-8 font-bold'></div>
-                <div className='z-50 text-5xl absolute top-8 md:top-24 font-bold font-zodiac right-6 text-white'>2022</div>
+                <div className='z-50 text-5xl absolute top-8 md:top-24 font-bold font-zodiac right-6 text-white'>2023</div>
             </div>
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-8 md:py-24'>
                 <div className='my-auto'>

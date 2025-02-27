@@ -33,6 +33,7 @@ import MobisImage2 from '../assets/images/MobisImage2.jpg'
 import MobisImage3 from '../assets/images/MobisImage3.jpg'
 import EicherImage1 from '../assets/images/EicherImage1.jpg'
 import EicherImage2 from '../assets/images/EicherImage2.jpg'
+import EicherImage3 from '../assets/images/EicherImage3.jpg'
 import { Carousel } from 'flowbite-react'
 // import { Carousel } from "flowbite-react";
 
@@ -84,7 +85,7 @@ const Carousal = ({title,subTitle}) => {
         </Carousel>
         }
         {
-            title==='Automobile Dealerships' && subTitle!=='BAJAJ' && subTitle!=='CHETAK' &&<Carousel>
+            title==='Automobile Dealerships' && subTitle==='HYUNDAI' &&<Carousel>
             <img src={AutomobileImage1} alt="..." />
             <img src={AutomobileImage2} alt="..." />
             <img src={AutomobileImage3} alt="..." />
@@ -102,6 +103,13 @@ const Carousal = ({title,subTitle}) => {
             title==='Automobile Dealerships' && (subTitle==='BAJAJ') && <Carousel>
             <img src={BajajImage1} alt="..." />
             <img src={BajajImage2} alt="..." />
+        </Carousel>
+        }
+        {
+            title==='Automobile Dealerships' && (subTitle==='TATA Authorized Service Station (TASS)') && <Carousel>
+            <img src={EicherImage1} alt="..." />
+            <img src={EicherImage2} alt="..." />
+            <img src={EicherImage3} alt="..." />
         </Carousel>
         }
         {
