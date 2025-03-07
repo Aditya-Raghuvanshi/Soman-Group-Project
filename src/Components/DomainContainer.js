@@ -33,7 +33,7 @@ const DomainContainer = () => {
           id:1,
           title:'HYUNDAI',
           description:'Initially started in 2011 in Baramati, have now sold over 10,000 cars in till 2021. Our dealership has around 45% market share in Baramati. We have also received many awards from the company with an excellent reputation in the market',
-          locations:['Baramati','Saswad','Indapur','Akluj','Patas','Bhor'],
+          locations:['Baramati','Pune','Solapur','Saswad','Indapur','Akluj','Patas','Bhor'],
           people:250,
         },
         {
@@ -115,7 +115,7 @@ const DomainContainer = () => {
           id:2,
           title:'DWARKADAS SHAMKUMAR',
           description:'12 years ago looking at the resonpse from the textile sector in Baramati the founders thought of spreading the business in complete Maharashtra . They partnered with dwarkadas shamkumar. They both 1st partnered in Baramati',
-          locations:['Latur (6)','Aurangabad (4)','Solapur','Aambejogai','Baramati','Phaltan','Osmanabad','Beed','Jalna','Omerga','Aehmadpur','Sillod'],
+          locations:['Latur (5)','Chhatrapati Sambhaji Maharaj (4)','Solapur (4)','Aambejogai','Osmanabad','Beed','Jalna','Omerga','Aehmadpur','Sillod'],
           people:850,
           area:'80,000 sq.ft'
         }, 
@@ -216,29 +216,29 @@ const DomainContainer = () => {
             <div className='image3 p-10 border w-full md:w-[50%] border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
                 <img className='mb-14' src={realEstate} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Real Estate</p>
-                <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
+                <p className='text-lg mt-4 font-outfit'>Real estate is real property that consists of land and improvements, which include buildings, fixtures, roads, structures, and utility systems. Property rights give a title of ownership to the land, improvements, and natural resources such as minerals, plants, animals, water, etc.</p>
             </div>
             <div className='image3 p-10 w-full md:w-[50%] border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
                 <img className='mb-14' src={automobile} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Automobile</p>
-                <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
+                <p className='text-lg mt-4 font-outfit'>An automobile is a self-propelled motor vehicle intended for passenger transportation on land. It usually has four wheels and an internal combustion engine fueled most often by gasoline, a liquid petroleum product.</p>
             </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 mt-8">
             <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(2)}>
                 <img className='mb-14' src={distribution} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Distribution</p>
-                <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
+                <p className='text-lg mt-4 font-outfit'>The distribution industry is an essential link in the supply chain, connecting manufacturing companies and suppliers with various businesses, contractors, institutions, retailers, and now increasingly consumers.</p>
             </div>
             <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(3)}>
                 <img className='mb-14' src={textile} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Textile</p>
-                <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
+                <p className='text-lg mt-4 font-outfit'>Textile industry describes the industry in which the production, processing, manufacture, and distribution of fabrics occurs. Fabrics are made using raw materials that are transformed into yarns and then knit or woven together.</p>
             </div>
             <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(4)}>
                 <img className='mb-14' src={farming} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Farming</p>
-                <p className='text-lg mt-4 font-outfit'>Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.</p>
+                <p className='text-lg mt-4 font-outfit'>A complete system which includes inputs, processing, and outputs. The inputs here are seeds, fertilizers, machinery, which then, undergoes operations like ploughing, sowing, irrigation, weeding, and harvesting.</p>
             </div>
         </div>
       </div>

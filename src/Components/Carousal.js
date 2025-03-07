@@ -34,6 +34,12 @@ import MobisImage3 from '../assets/images/MobisImage3.jpg'
 import EicherImage1 from '../assets/images/EicherImage1.jpg'
 import EicherImage2 from '../assets/images/EicherImage2.jpg'
 import EicherImage3 from '../assets/images/EicherImage3.jpg'
+import AgriImage1 from '../assets/images/AgricultureImage1.jpg'
+import AgriImage2 from '../assets/images/AgricultureImage2.jpg'
+// import TractorImage1 from '../assets/images/TractorImage1.jpeg'
+// import TractorImage2 from '../assets/images/TractorImage2.jpg'
+import TractorImage3 from '../assets/images/TractorImage4.webp'
+import TractorImage4 from '../assets/images/TractorImage5.webp'
 import { Carousel } from 'flowbite-react'
 // import { Carousel } from "flowbite-react";
 
@@ -80,8 +86,8 @@ const Carousal = ({title,subTitle}) => {
         }
         {
             title==='Distributorship' && subTitle==='EICHER TRACTOR Distributor'&& <Carousel>
-            <img src={EicherImage1} alt="..." />
-            <img src={EicherImage2} alt="..." />
+            <img src={TractorImage3} alt="..." />
+            <img src={TractorImage4} alt="..." />
         </Carousel>
         }
         {
@@ -128,13 +134,8 @@ const Carousal = ({title,subTitle}) => {
         </Carousel>
         }
         {title==='Agriculture' && <Carousel>
-            <img src={RealEstateImage} alt="..." />
-            <img src={RealEstateImage1} alt="..." />
-            <img src={RealEstateImage2} alt="..." />
-            <img src={RealEstateImage3} alt="..." />
-            <img src={RealEstateImage4} alt="..." />
-            <img src={RealEstateImage5} alt="..." />
-            <img src={RealEstateImage6} alt="..." />
+            <img src={AgriImage1} alt="..." />
+            <img src={AgriImage2} alt="..." />
         </Carousel>}
         </div>
     </>

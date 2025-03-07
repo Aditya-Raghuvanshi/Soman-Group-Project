@@ -39,7 +39,7 @@ const Navbar = () => {
           id:1,
           title:'HYUNDAI',
           description:'Initially started in 2011 in Baramati, have now sold over 10,000 cars in till 2021. Our dealership has around 45% market share in Baramati. We have also received many awards from the company with an excellent reputation in the market',
-          locations:['Baramati','Saswad','Indapur','Akluj','Patas','Bhor'],
+          locations:['Baramati','Pune','Solapur','Saswad','Indapur','Akluj','Patas','Bhor'],
           people:250,
         },
         {
@@ -121,7 +121,7 @@ const Navbar = () => {
           id:2,
           title:'DWARKADAS SHAMKUMAR',
           description:'12 years ago looking at the resonpse from the textile sector in Baramati the founders thought of spreading the business in complete Maharashtra . They partnered with dwarkadas shamkumar. They both 1st partnered in Baramati',
-          locations:['Latur (6)','Aurangabad (4)','Solapur','Aambejogai','Baramati','Phaltan','Osmanabad','Beed','Jalna','Omerga','Aehmadpur','Sillod'],
+          locations:['Latur (5)','Chhatrapati Sambhaji Maharaj (4)','Solapur (4)','Aambejogai','Osmanabad','Beed','Jalna','Omerga','Aehmadpur','Sillod'],
           people:850,
           area:'80,000 sq.ft'
         }, 
@@ -269,7 +269,7 @@ const Navbar = () => {
                 id="dropdownNavbarLink"
                 className="flex items-center justify-between w-full text-gray-900 text-sm rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                Products{" "}
+                Divisions{" "}
                 <svg
                   className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
@@ -292,18 +292,18 @@ const Navbar = () => {
                   <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
                     <li className='cursor-pointer'>
                       <p
-                        onClick={()=>handleNavigateClick(0)}
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Real Estate
-                      </p>
-                    </li>
-                    <li className='cursor-pointer'>
-                      <p
                         onClick={()=>handleNavigateClick(1)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
                         Automobile
+                      </p>
+                    </li>
+                    <li className='cursor-pointer'>
+                      <p
+                        onClick={()=>handleNavigateClick(3)}
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Textile
                       </p>
                     </li>
                     <li className='cursor-pointer'>
@@ -316,10 +316,10 @@ const Navbar = () => {
                     </li>
                     <li className='cursor-pointer'>
                       <p
-                        onClick={()=>handleNavigateClick(3)}
+                        onClick={()=>handleNavigateClick(0)}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
-                        Textile
+                        Real Estate
                       </p>
                     </li>
                     <li className='cursor-pointer'>

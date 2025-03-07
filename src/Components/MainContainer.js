@@ -38,7 +38,7 @@ const MainContainer = () => {
         <img src={Divider} alt="Divider" />
         <div className='mx-2'><p className='text-2xl md:text-6xl text-white font-semibold text-center font-zodiac'>5</p><p className='text-[#A2A2A2] pt-2 font-outfit text-sm md:text-base'>benchmark industries</p></div>
         <img src={Divider} alt="Divider" />
-        <div className='mx-2'><p className='text-2xl md:text-6xl text-white font-semibold font-zodiac'>2300+</p><p className='text-[#A2A2A2] pt-2 font-outfit text-sm md:text-base'>motivated employees </p></div>
+        <div className='mx-2'><p className='text-2xl md:text-6xl text-white font-semibold font-zodiac'>1700+</p><p className='text-[#A2A2A2] pt-2 font-outfit text-sm md:text-base'>motivated employees </p></div>
         <img src={Divider} alt="Divider" />
         <div className='mx-2'>
           <p className='text-2xl md:text-6xl text-white font-semibold text-center'>24x7</p>
