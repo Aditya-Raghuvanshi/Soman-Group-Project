@@ -38,14 +38,14 @@ const Navbar = () => {
         {
           id:1,
           title:'HYUNDAI',
-          description:'Initially started in 2011 in Baramati, have now sold over 10,000 cars in till 2021. Our dealership has around 45% market share in Baramati. We have also received many awards from the company with an excellent reputation in the market',
+          description:'Established in 2011 in Baramati, our dealership has grown into a trusted name in the automobile industry, known for its commitment to excellence and customer satisfaction. By 2024, we have proudly sold over 18,000 cars, building a strong reputation backed by multiple prestigious awards from the company. With a dedicated team and state-of-the-art facilities, we now have the capacity to service over 60,000 vehicles, ensuring every customer receives top-notch care and an exceptional service experience.',
           locations:['Baramati','Pune','Solapur','Saswad','Indapur','Akluj','Patas','Bhor'],
           people:250,
         },
         {
           id:2,
           title:'BAJAJ',
-          description:'We started in 2008. Mainly focused on two wheeler supply in and around Satara district including 8 different talukas. We also act as main supplier to more than 20 sub dealers. Making us the dealership with high market share.',
+          description:'We began our journey in 2008, primarily focusing on the supply of two-wheelers across the Satara district, covering eight talukas. Over the years, we have established ourselves as a key player in the region, serving as the main supplier to more than 20 sub-dealers. This strong distribution network has solidified our position as a leading dealership. Marking our first entry into the automobile sector, our commitment to quality service and customer satisfaction has driven our growth and success.',
           locations:['Baramati','Phaltan'],
           people:250,
         },
