@@ -216,29 +216,29 @@ const DomainContainer = () => {
             <div className='image3 p-10 border w-full md:w-[50%] border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(0)}>
                 <img className='mb-14' src={realEstate} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Real Estate</p>
-                <p className='text-lg mt-4 font-outfit'>Real estate is real property that consists of land and improvements, which include buildings, fixtures, roads, structures, and utility systems. Property rights give a title of ownership to the land, improvements, and natural resources such as minerals, plants, animals, water, etc.</p>
+                <p className='text-lg mt-4 font-outfit'>The group ventured into real estate three years ago, establishing projects in Pune and Baramati. With a focus on quality and timely delivery, they aim to be a trusted namein real estate.</p>
             </div>
             <div className='image3 p-10 w-full md:w-[50%] border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(1)}>
                 <img className='mb-14' src={automobile} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Automobile</p>
-                <p className='text-lg mt-4 font-outfit'>An automobile is a self-propelled motor vehicle intended for passenger transportation on land. It usually has four wheels and an internal combustion engine fueled most often by gasoline, a liquid petroleum product.</p>
+                <p className='text-lg mt-4 font-outfit'>Starting with Bajaj two-wheeler dealership in Baramati in 2008, we expanded to multiple dealerships: Hyundai, Chetak & TATA-authorized service station.</p>
             </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 mt-8">
             <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(2)}>
                 <img className='mb-14' src={distribution} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Distribution</p>
-                <p className='text-lg mt-4 font-outfit'>The distribution industry is an essential link in the supply chain, connecting manufacturing companies and suppliers with various businesses, contractors, institutions, retailers, and now increasingly consumers.</p>
+                <p className='text-lg mt-4 font-outfit'>The Somani Group began its distribution business in 2013 with TATA commercial vehicle spare parts, covering the entire Maharashtra region.</p>
             </div>
             <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(3)}>
                 <img className='mb-14' src={textile} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Textile</p>
-                <p className='text-lg mt-4 font-outfit'>Textile industry describes the industry in which the production, processing, manufacture, and distribution of fabrics occurs. Fabrics are made using raw materials that are transformed into yarns and then knit or woven together.</p>
+                <p className='text-lg mt-4 font-outfit'>Textiles were the first business the Somani Group ventured into, started by the late grandfather Champalal Somani in 1967. Now the group operates 32+ locations.</p>
             </div>
             <div className='image3 p-10 border border-[#E6D8CC] cursor-pointer' onClick={()=>handleClick(4)}>
                 <img className='mb-14' src={farming} alt="" />
                 <p className='text-xl md:text-4xl font-semibold font-zodiac'>Farming</p>
-                <p className='text-lg mt-4 font-outfit'>A complete system which includes inputs, processing, and outputs. The inputs here are seeds, fertilizers, machinery, which then, undergoes operations like ploughing, sowing, irrigation, weeding, and harvesting.</p>
+                <p className='text-lg mt-4 font-outfit'>The Somani Group began farming under the guidance of the late grandfather Champalal Somani, starting with a small plot of land & today, they manage 800 acres of farming, sugarcane cultivation and cattle fields.</p>
             </div>
         </div>
       </div>
