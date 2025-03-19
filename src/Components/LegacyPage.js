@@ -112,7 +112,7 @@ const LegacyPage = () => {
             <div className='w-1/2 bg-[#0B6476] flex justify-start p-8 py-8 md:py-24'>
                 <div className='my-auto'>
                     <p className='text-xl md:text-3xl text-white font-bold font-zodiac'>Textile Business</p>
-                    <p className='text-white w-3/4 my-6 font-outfit opacity-65 text-xs md:text-sm'>Textiles were the first business the Somani Group ventured into, started by the late grandfather Champalal Somani in 1967 with an 800 sqft store. Today, the group operates 32+ locations with over 5 lakh sqft dedicated to delivering fabrics. Their new brand, 'The Wardrobe,' focuses on menswear for Tier 2 and Tier 3 cities. Generating over 350 crore turnover, they are transitioning into a franchise model to scale further.</p>
+                    <p className='text-white w-3/4 my-6 font-outfit opacity-65 text-xs md:text-sm'>Textiles were the first business the Somani Group ventured into, started by the late grandfather Champalal Somani in 1967 with an 800 sqft store. Today, the group operates 32+ locations with over 5 lakh sqft dedicated to delivering fabrics. Their new brand, 'The Wardrobe,' focuses on menswear for Tier 2 and Tier 3 cities. they are transitioning into a franchise model to scale further.</p>
                     <p className='flex cursor-pointer'><p className='text-white font-outfit text-sm'>Learn More</p><img src={arrow} alt="" /> </p>
                 </div>
             </div> 

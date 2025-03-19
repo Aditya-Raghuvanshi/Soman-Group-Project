@@ -82,7 +82,7 @@ const MidContainer = () => {
           </div>
           <p className='about-text text-3xl md:text-7xl my-6 font-zodiac font-semibold'>Since 1968</p>
           <p className='about-text1 text-[#444444] text-sm md:text-base mb-4 md:mb-auto w-full md:w-[80%] font-outfit'>
-            Founded by the a founder late Mr. Motilal Somani and his late son Mr. Champalal Motilal Somani, the Somani Group is one of the most respected and renowned business houses of Baramati & Maharashtra
+            Founded by Mr. Champalal Motilal Somani, the Somani Group is one of the most respected and renowned business houses of Baramati & Maharashtra
           </p>
         </div>
         <img className='image1 h-80 md:h-auto md:mb-20' src={image1} alt="" />
