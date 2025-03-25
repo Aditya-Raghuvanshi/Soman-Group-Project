@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { Marker } from 'react-leaflet';
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import {Icon} from 'leaflet'
+import './Map.css'
 
 const MapComponent = () => {
   const containerRef = useRef(null);
@@ -68,8 +69,31 @@ const MapComponent = () => {
                 <img className='w-16' src={horizontalLine} alt="" />
                 <p className='text-[#996830] text-sm ml-4'>OUR PRESENCE</p>
             </div>
-            <p className='map-text text-3xl md:text-6xl font-zodiac'>Building future in</p>
-            <p className='map-text1 text-3xl md:text-6xl font-zodiac'><b><i>Pune</i></b></p>
+            <div className='text-changer'>
+              <p className='map-text text-3xl md:text-6xl font-zodiac'>Building future in</p>
+              <div className='roles-container h-11 md:h-20 font-zodiac'>
+                  <span className='role text-3xl md:text-6xl'>Pune</span>
+                  <span className='role text-3xl md:text-6xl'>Baramati</span>
+                  <span className='role text-3xl md:text-6xl'>patas</span>
+                  <span className='role text-3xl md:text-6xl'>lonikand</span>
+                  <span className='role text-3xl md:text-6xl'>wadki</span>
+                  <span className='role text-3xl md:text-6xl'>Nagpur</span>
+                  <span className='role text-3xl md:text-6xl'>Kolhapur</span>
+                  <span className='role text-3xl md:text-6xl'>Solapur</span>
+                  <span className='role text-3xl md:text-6xl'>nashik</span>
+                  <span className='role text-3xl md:text-6xl'>latur</span>
+                  <span className='role text-3xl md:text-6xl'>ahmedpur</span>
+                  <span className='role text-3xl md:text-6xl'>udgir</span>
+                  <span className='role text-3xl md:text-6xl'>beed</span>
+                  <span className='role text-3xl md:text-6xl'>jalna</span>
+                  <span className='role text-3xl md:text-6xl'>beed</span>
+                  <span className='role text-3xl md:text-6xl'>Ch. sambhajinagar</span>
+                  <span className='role text-3xl md:text-6xl'>sillod</span>
+                  <span className='role text-3xl md:text-6xl'>akluj</span>
+                  <span className='role text-3xl md:text-6xl'>Pandharpur</span>
+                  <span className='role text-3xl md:text-6xl'>Pune</span>
+              </div>
+            </div>
         </div>
         <div className='mt-20'>
         <MapContainer center={[18.520430, 73.856743]} zoom={6} style={{ height: "400px", width: "100%" }}>
