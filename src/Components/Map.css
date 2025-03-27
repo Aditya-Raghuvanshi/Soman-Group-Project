@@ -13,7 +13,7 @@
     height:100%;
     /* color:#956afa; */
     padding-bottom:8px;
-    animation: role-change 18s infinite;
+    animation: role-change 25s infinite;
 }
 
 @keyframes role-change {
